@@ -1,0 +1,190 @@
+@charset "utf-8";
+#calendar{
+    position: relative;
+  }
+  #add{
+    z-index: 1000;
+    width: 60%;
+    margin: 0 auto;
+    position:fixed;
+    top: 200px;
+    left: 50%;
+    margin-left:-30%;
+    background: #141415;
+    overflow: auto
+    /* padding: 50px */
+  }
+  #add h3{
+    color: #AD9440;
+    text-align: center
+  }
+  h4{
+    text-align: center
+  }
+  #add div{
+    position: relative;
+  }
+  #calendar .cancel{
+    color: #AD9440;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: unset;
+    margin: 0
+  }
+  #calendar .cancel:hover{
+    color: #96031A;
+    cursor: pointer;
+  }
+  #add span{
+    color: #AD9440;
+    width: 100px;
+    display: inline-block;
+    margin: 10px 0 10px 30px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0
+  }
+  #add input,#add textarea,#add select{
+    margin: 10px 0 10px 150px
+  }
+  #add button,.showData button,.editData button,.deleteBox button{
+    background: #AD9440;
+    color: #96031A;
+    border: #96031A 1px solid;
+    margin: 20px 0 50px 0;
+    margin-left: calc(33.3% - 40px);
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .dayEvent{
+    position: fixed;
+    top: 200px;
+    z-index: 1000;
+    color: #AD9440;
+    list-style: none;
+    background: #141415;
+    width: 60%;
+    left: 50%;
+    margin-left: -30%
+  }
+  .dayEvent ul{
+    list-style: none;
+  }
+  .dayEvent li:hover{
+    color: #96031A;
+    cursor: pointer;
+  }
+  .showData span, .editData span{
+    margin: 0 40px;
+    min-width: 100px;
+    display: inline-block
+  }
+  .editData{
+    overflow: auto
+  }
+  .editData div{
+    position: relative;
+  }
+  .editData span{
+    position: absolute;
+    top:0;
+    margin: 10px 40px
+  }
+  .editData input,.editData textarea,.editData select{
+    margin: 10px 0 10px 150px
+  }
+  .dayEvent .deleteBox{
+    width: 80%;
+    position:absolute;
+    top:60px;
+    left:50%;
+    margin-left:-40%;
+    background:black
+  }
+  #calendar .gold{
+    background:#AD9440;
+    color: #96031A
+  }
+  .testBtn{
+    background: #AD9440;
+    border: 1px #96031A solid;
+    color: #96031A;
+  }
+  #calendar .comp-full-calendar{
+    background: #141415
+  }
+  #calendar .full-calendar-header .header-center{
+    color: #96031A
+  }
+  #calendar .full-calendar-header .header-center .prev-month, .full-calendar-header .header-center .next-month{
+    background: black
+  }
+  #calendar .full-calendar-body .weeks{
+    border-top: 1px #96031A solid;
+    border-bottom: 1px #96031A solid;
+    border-left: 1px #96031A solid;
+    color:#96031A;
+    background:black
+  }
+  #calendar .full-calendar-body .weeks .week{
+    border-right: 1px #800000 solid
+  }
+  #calendar .full-calendar-body .dates{
+    background: black;
+  }
+  #calendar .full-calendar-body .dates .week-row{
+    border-left: 1px #96031A solid
+  }
+  #calendar .full-calendar-body .dates .week-row .day-cell{
+    border-right: 1px #96031A solid;
+    border-bottom: 1px #96031A solid
+  }
+  #calendar .full-calendar-body .dates .week-row .day-cell .day-number{
+    color: #96031A;
+  }
+  #calendar .full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-start{
+    border-radius: 4px 0 0 4px
+  }
+  #calendar .full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-end{
+    border-radius: 0 4px 4px 0
+  }
+  #calendar .full-calendar-body .dates .dates-events .events-week .events-day .event-box .event-item.is-start.event-item.is-end{
+    border-radius: 4px
+  }
+  #calendar .full-calendar-body .dates .week-row .day-cell.today{
+    background: #141415
+  }
+  #calendar .full-calendar-body .dates .dates-events .events-week .events-day .event-box .more-link{
+    color: #96031A
+  }
+  #calendar .full-calendar-body .dates .more-events .more-header{
+    background: #AD9440;
+    color: #96031A
+  }
+  #calendar .full-calendar-body .dates .more-events .more-body .body-list{
+    background: #141415
+  }
+  #calendar .full-calendar-body .dates .more-events{
+    border: #AD9440 1px solid;
+    width: 15rem;
+    background: #141415
+
+  }
+  #calendar .full-calendar-body .dates .more-events .more-body .body-list .body-item{
+    background: #AD9440;
+    color:#96031A
+  }
+  .more-footer{
+    background: #141415
+  }
+  .addEvent,.editEvent,.cancelEvent{
+    color: #96031A;
+    background: #AD9440;
+    border: #96031A 1px solid;
+    margin: 0 0 6px 6px
+  }
+@media screen and (max-width:768px){
+  
+}

@@ -1,0 +1,13 @@
+{
+  "short_name": "72D Panel",
+  "name": "72 Dragons Staff Panel",
+  "icons": [
+    {
+      "src": "media/images/site/72Dragons-solologo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.php",
+  "display": "standalone"
+}

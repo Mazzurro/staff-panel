@@ -1,0 +1,23 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, DELETE, PUT"
+Header always set Access-Control-Allow-Headers "origin, content-type, x-auth-token"
+
+RewriteCond %{REQUEST_URI} /staff/content/(.*)
+RewriteRule .* /staff/api-v1/redirects.php?url=%{REQUEST_URI} [NC,L]
+
+RewriteCond %{REQUEST_URI} /staff/api/(.*)
+RewriteRule .* /staff/api-v1/index.php?api=%{REQUEST_URI} [NC,L]
+
+RewriteCond %{REQUEST_URI} /staff/app/(.*)
+RewriteRule .* /staff/apps/index.php?url=%{REQUEST_URI} [NC,L]
+
+RewriteCond %{REQUEST_URI} /staff/section/(.*)
+RewriteRule .* /staff/apps/index.php?url=%{REQUEST_URI} [NC,L]
+
+RewriteCond %{REQUEST_URI} /staff/reports/(.*)/read
+RewriteRule .* /staff/api-v1/redirects.php?url=%{REQUEST_URI} [NC,L]

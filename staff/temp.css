@@ -1,0 +1,218 @@
+/*Basic Necessities*/
+button.submit {
+    background: #1b1b1b !important;
+    border: 1px #ad9440 solid !important;
+    border-radius: 10px !important;
+}
+
+.input-container {
+    background: #1b1b1b;
+    max-width: 800px;
+    padding: 20px;
+    margin: 10px auto 25px auto;
+    border: 1px #ad9440 solid;
+    border-radius: 10px;
+}
+
+.graph-container {
+    border-radius: 10px;
+    background: #0e0e0e;
+    overflow: hidden;
+    border: 1px #504F4F solid;
+}
+
+
+/*Assignments and its contents*/
+
+#assignments {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width 0.5s;
+}
+#assignments.active {
+    width: 350px !important;
+}
+
+assignment {
+    display: flex !important;
+    max-width: 800px;
+    margin: 25px auto;
+    border: 2px #ad9440 solid;
+    border-radius: 10px;
+    background: #1f1f1f;
+    width: unset;
+    position: relative;
+    transition: filter 0.5s;
+}
+assignment.active {
+    filter: brightness(50%);
+}
+assignment.active:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -26px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    display: block;
+    border: 12px solid;
+    border-color: transparent transparent transparent#ad9440;
+}
+assignment-assigned {
+    min-width: 150px;
+    min-height: 60px;
+    display: flex !important;
+    border-right: 2px #ad9440 solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: min-width 0.5s;
+}
+#assignments.active assignment-assigned{
+    min-width: 50px !important;
+}
+assignment-assigned-staff {
+    display: block;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    filter: brightness(75%);
+    transition: filter 0.25s;
+}
+assignment-assigned-staff:hover {
+    filter: brightness(100%) !important;
+    z-index: 2;
+}
+assignment-assigned-staff:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+assignment-assigned-staff.outside-dept {
+    filter: brightness(50%) grayscale(1);
+}
+assignment-assigned-staff span {
+    position: absolute;
+    background: #151515;
+    z-index: 2;
+    font-size: 16px;
+    text-align: center;
+    min-width: 75px;
+    border-radius: 7px;
+    padding: 2px;
+    margin: 0px 5px;
+    top: 50%;
+    left: 75%;
+    transform: translateY(-50%);
+    border: 1px #ad9440 solid;
+    opacity: 0;
+    transition: opacity 0.25s, left 0.25s;
+}
+assignment-assigned-staff:hover span {
+    left: 100%;
+    opacity: 1;
+}
+assignment-title {
+    margin: auto 0;
+    padding: 20px 15px;
+    max-width: unset;
+    width: 100%;
+}
+assignment-title h3 {
+    margin: 0;
+    text-align: left;
+    font-size: 28px;
+    background: unset;
+    transition: font-size 0.5s;
+}
+#assignments.active h3 {
+    font-size: 16px !important;
+}
+assignment-controls {
+    display: grid !important;
+    min-width: 75px;
+    min-height: 60px;
+    background: #1b1b1b;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    grid-template-columns: 50% 50%;
+    border-left: 2px #ad9440 solid;
+    font-size: 22px;
+    transition: min-width 0.5s, font-size 0.5s;
+}
+#assignments.active assignment-controls{
+    min-width: 20px !important;
+    font-size: 16px !important;
+    grid-template-columns: unset !important;
+}
+assignment-controls-item {
+    display: block;
+    place-self: center;
+    cursor: pointer;
+}
+
+
+#assignment-cms {
+    display: block;
+    overflow: auto;
+    width: 0px;
+    float: right;
+    transition: width 0.5s;
+}
+#assignment-cms.active {
+    width: calc(100% - 350px);
+}
+#cms-iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-left: 3px #ad9440 solid;
+}
+
+/*Notifications*/
+.notif {
+    width: 230px;
+    min-height: 50px;
+    margin: 10px;
+    background: #ad9440;
+    color: #191919;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
+.notif-animate-container {
+    position: fixed;
+    right: 0;
+    top: 50px;
+    height: calc(100vh - 50px);
+    z-index: 10005;
+}
+.notif-animate {
+    position: relative;
+    animation: appear 5s;
+}
+@keyframes appear {
+    0% {right: -300px}
+    10% {right: 20px}
+    90% {right: 20px}
+    100% {right: -300px}
+}
+.notif-good {
+    background: #3ab33a;
+}
+.notif-bad {
+    background: #b33a3a;
+}
+.notif h4 {
+    margin: 0;
+    text-align: left;
+}
+.notif p {
+    margin: 7px 0;
+}

@@ -1,0 +1,422 @@
+@charset "utf-8";
+#calendarPage input.testBtn {
+    background: #AD9440;
+    color: #96031A;
+    border: #96031A 1px solid;
+}
+
+input,
+textarea,
+select,
+option {
+    background: black;
+    border: #AD9440 1px solid;
+    color: #AD9440;
+    outline-color: #96031A;
+}
+
+input[type="date"]::-webkit-clear-button,
+input[type="time"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+#navBar {
+    display: none;
+}
+
+#navBar img {
+    width: 50px;
+    height: 50px;
+}
+
+#navBar span {
+    font-size: 20px;
+}
+
+#navList {
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    background: #141415;
+    padding: 0;
+}
+
+#navList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navList li {
+    border: #AD9440 1px solid;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+#calendar button {
+    background: #AD9440;
+    color: #96031A;
+    border: #96031A 1px solid;
+}
+
+#calendar .fc-event {
+    color: #96031A!important
+}
+
+#calendarPage {
+    color: #96031A;
+    height: calc(100% - 80px);
+}
+
+#calendar {
+    height: calc(100% - 40px);
+}
+
+.dayEvent {
+    position: fixed;
+    top: 40px;
+    z-index: 1000;
+    color: #AD9440;
+    list-style: none;
+    background: #141415;
+    width: 60%;
+    left: 50%;
+    margin-left: -30%;
+    max-height: calc(100% - 60px);
+    overflow: auto;
+}
+
+.dayEvent ul {
+    list-style: none;
+    padding-inline-end: 40px;
+}
+
+.dayEvent li {
+    margin-top: 10px;
+    border-bottom: #AD9440 1px solid;
+}
+
+.dayEvent li:hover {
+    color: #96031A;
+    cursor: pointer;
+}
+
+.dayEvent h3 {
+    text-align: center;
+}
+
+.dayEvent .deleteBox {
+    width: 80%;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -40%;
+    background: black;
+}
+
+#calendarPage .cancel {
+    color: #AD9440;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: unset;
+    margin: 0
+}
+
+.outCancel {
+    height: 30px;
+}
+
+.cancel:hover {
+    color: #96031A;
+    cursor: pointer;
+}
+
+.cannotAdd {
+    z-index: 5;
+    position: absolute;
+    top: 40px;
+    width: 40%;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -20%;
+    background: #141415;
+    overflow: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#newAssignment,
+#add {
+    z-index: 1000;
+    width: 60%;
+    margin: 0 auto;
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    margin-left: -30%;
+    background: #141415;
+    overflow: auto;
+    max-height: calc(100% - 45px);
+    /* padding: 50px */
+}
+
+#add h3,
+#newAssignment h3,
+.cannotAdd h3 {
+    color: #AD9440;
+    text-align: center
+}
+
+.cannotAdd button {
+    background: #AD9440;
+    color: #96031A;
+    border: #96031A 1px solid;
+}
+
+h4 {
+    text-align: center
+}
+
+#add div,
+#newAssignment div {
+    position: relative;
+}
+
+#add span,
+#newAssignment span {
+    color: #AD9440;
+    width: 100px;
+    display: inline-block;
+    margin: 10px 0 10px 30px;
+    vertical-align: middle;
+    position: absolute;
+    top: 0
+}
+
+#add .notiBox {
+    width: unset;
+}
+
+#add input,
+#add textarea,
+#add select,
+#newAssignment input,
+#newAssignment textarea,
+#newAssignment select {
+    margin: 10px 0 10px 150px
+}
+
+#add button,
+#newAssignment button,
+.showData button,
+.editData button,
+.deleteBox button {
+    background: #AD9440;
+    color: #96031A;
+    border: #96031A 1px solid;
+    margin: 20px 0 50px 0;
+    margin-left: calc(30% - 40px);
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.showData span,
+.editData span {
+    margin: 0 40px;
+    min-width: 100px;
+    display: inline-block
+}
+
+.showData {
+    padding-bottom: 40px;
+}
+
+.editData {
+    overflow: auto
+}
+
+.editData div {
+    position: relative;
+}
+
+.editData span {
+    position: absolute;
+    top: 0;
+    margin: 10px 40px
+}
+
+.editData input,
+.editData textarea,
+.editData select {
+    margin: 10px 0 10px 150px
+}
+
+.fc-view-container {
+    overflow: auto;
+}
+
+textarea {
+    width: calc(100% - 190px)
+}
+
+.calendarList,
+.reminderList,
+.reminders {
+    position: absolute;
+    top: 100px;
+    background: #141415;
+    z-index: 5;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.calendarList {
+    left: 18%;
+}
+
+.reminderList {
+    left: 5%;
+}
+
+.reminders {
+    left: 20%
+}
+
+.calendarList ul,
+.reminderList ul,
+.reminders ul {
+    list-style: none;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.reminders input {
+    width: 20px;
+    text-align: right;
+}
+
+.calendarList span {
+    margin-right: 20px;
+}
+
+.calendarList button,
+.reminderList button,
+.reminders button {
+    background: #AD9440;
+    color: #96031A;
+    border: #96031A 1px solid;
+}
+
+.calendarList .editList,
+.reminderList .editList,
+.reminders .editList {
+    float: right;
+    margin-right: 10px;
+}
+
+.reminderList li:hover {
+    background: #AD9440;
+    cursor: pointer;
+}
+
+.shareCalendar,
+.deleteCalendar,
+.removeCalendar {
+    position: absolute;
+    top: 100px;
+    left: 47%;
+    background: #141415;
+    padding: 0 20px 20px 20px;
+    z-index: 5;
+    text-align: center;
+}
+
+.shareCalendar button,
+.deleteCalendar button,
+.removeCalendar button {
+    background: #AD9440;
+    color: #96031A;
+    border: #96031A 1px solid;
+    margin: 10px;
+}
+
+input[type="color"] {
+    width: 23px;
+    padding: 0;
+    border: none;
+}
+
+.cannotAdd,
+#navList,
+.dayEvent,
+.dayEvent .deleteBox,
+#add,
+#newAssignment,
+.reminderList,
+.reminders,
+.calendarList,
+.shareCalendar,
+.deleteCalendar {
+    border: #AD9440 1px solid;
+    box-shadow: 0px 0px 25px #141415;
+}
+
+.x {
+    height: 15px;
+}
+
+#newAssignment select {
+    width: 200px;
+}
+
+@media screen and (max-width:767px) {
+    .testBtn {
+        display: none;
+    }
+    #navBar {
+        background: #141415;
+        border: #AD9440 1px solid;
+        height: 50px;
+        display: block;
+    }
+    #calendarPage {
+        height: calc(100vh - 66px);
+    }
+}
+
+@media screen and (max-width:420px) {
+    .dayEvent {
+        top: 50px;
+        width: 80%;
+        margin-left: -40%;
+    }
+    #add select,
+    #add input,
+    #newAssignment select,
+    #newAssignment input textarea {
+        max-width: calc(100% - 200px)
+    }
+    .editData input,
+    .editData textarea,
+    .editData select {
+        margin-left: 40px;
+    }
+    .editData span {
+        position: unset;
+    }
+    .editData {
+        overflow: scroll;
+        height: 70vh;
+    }
+    #add,
+    #newAssignment {
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+        overflow: auto;
+    }
+}

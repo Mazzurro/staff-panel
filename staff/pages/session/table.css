@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #141415;
+}
+th, td{ 
+	border:1px solid #AD9440;
+	height: 3vw;
+	background: #000000;
+	text-align:center;
+	vertical-align:middle;
+}
+th{
+	background: #141415;
+}
+td{
+	height:2vw;
+}
+.background.logo {
+    background-image: url(https://72dragons.com/images/72Dragons-solologo.png);
+    opacity: 0.15;
+    filter: blur(10px);
+}
+.panel-background, .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.background-fixed {
+    position: fixed;
+}
+.sea{
+	background: black;
+    font-size: 16px;
+    padding-left: 5px;
+    color: white;
+    border: 1px solid #ad9440;
+    height: 35px;
+    outline: none;
+    cursor: pointer;
+}
+#search{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw 0;
+}
+#search img{
+    width: 23px;
+    background: black;
+    padding: 6px;
+}
+.input_search{
+    margin: 5px 0;
+    height: 35px;
+    width: 300px;
+    border: 0;
+    border-left: 5px #141415 solid;
+    background-color: black;
+    color: #FFF;
+    padding: 0 5px;
+    font-size: 16px;
+    transition: border-color 0.5s;
+}
+.input_search:focus {
+    border-color: maroon;
+    outline: none;
+}	
+table {
+	width: 95vw;
+	text-align: center;
+	border-collapse: collapse;
+	color: white;
+	margin: auto;
+	background: black;
+} 
+.other{
+	cursor: pointer;
+    text-align: center;
+    background: black;
+}
+.del{
+	cursor: pointer;
+	display: none;
+	width: 100%;
+	background: #96031A;
+    color: white;
+    border: none;
+    line-height: 30px;
+}
+table img{
+	margin: 0 auto;
+    display: block;
+    background: black;
+    width: 30px;
+}
+.load{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.load span{
+	cursor: pointer;
+    color: gray;
+    line-height: 18px;
+}
+.trcla:hover{
+	background: #96031A;
+}

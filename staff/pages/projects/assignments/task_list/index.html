@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: black;
+			}
+			.external{
+				display: flex;
+			    justify-content: center;
+		        margin: 0 auto;
+			    margin-top: 3vw;
+			    width: 92vw;
+			    background: #141415;
+			    border-left: 1px solid #ad9440;
+			    border-right: 1px solid #ad9440;
+			}
+			table{
+				width: 85vw;
+			    border-bottom: 1px solid #ad9440;
+			    margin: 3vw auto;
+			    padding: 2vw auto;
+			}
+			th,td{
+				height: 6vw;
+			    border-top: 1px solid #ad9440;
+			}
+			td{
+				height: 4vw;
+			}
+			th{
+				width: 25%;
+				color: #FFFbFE;
+				font-size: 22px;
+				border-top: 1px solid #ad9440;
+			}
+			th:first-child{
+				color: #96031A;
+			}
+			th:last-child{
+				color: #AD9440 ;
+			}
+			.list{
+				color: #FFFbFE;
+			}
+			.list:first-child{
+				color: #96031A;
+			}
+			.list:last-child{
+				color: #AD9440 ;
+			}
+			.list img{
+				cursor: pointer;
+			    width: 3vw;
+			    transition: all 0.5s ease 0s;
+			}
+			.newTr td{
+				color: white;
+			    border: none;
+			    padding-bottom: 10px;
+			    padding-left: 20px;
+			}
+			.newDiv{
+				border-right: 1px solid #ad9440;
+			}
+			.Check{
+				margin: 15px 0;
+				display: flex;
+    			align-items: center;
+    			justify-content: space-between;
+			}
+			label{
+				cursor: pointer;
+	            margin:10px;
+	        }
+	        .a-radio{
+	            display: none;
+	        }
+	        .b-radio{
+	        	cursor: pointer;
+	            display: inline-block;
+	            border:1px solid #ccc;
+	            width:16px;
+	            height: 16px;
+	            border-radius:2px;
+	            vertical-align: middle;
+	            margin-right: 5px;
+	            position: relative;
+	        }
+	        .b-radio:before{
+	            content: '';
+	            font-size: 0;
+	            width: 10px;
+	            height: 10px;
+	            background: white;
+	            position: absolute;
+	            left:50%;
+	            top:50%;
+	            margin-left: -5px;
+	            margin-top: -5px;
+	            border-radius: 2px;
+	            display: none;
+	        }
+	        .a-radio:checked~.b-radio:before{
+	            display: block;
+	        }
+	        textarea{
+			    border: 1px solid #ad9440;
+			    padding-top: 5px;
+			    padding-left: 5px;
+			    background: #141415;
+			    width: 98%;
+			    color: white;
+			    font-size: 15px;
+			    border-radius: 4px;
+	        }
+	        button{
+				cursor: pointer;
+			    width: 60px;
+			    height: 25px;
+			    margin-right: 18px;
+			    color: white;
+			    border-radius: 2px;
+			    border: none;
+			    background: #ad9440;
+	        }
+	        button:hover{
+				cursor: pointer;
+	        	background: #96031a;
+	        }
+			.newTr p:first-child{
+				font-size: 20px;
+			}
+			.newTr p:nth-child(2){
+				padding-right: 15px;
+			}
+			.newTr img{
+				width: 36px;
+			    height: 35px;
+			    border-radius: 30px;
+		        margin-right: 15px;
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<body>
+		<div class="external">
+			<table id="mytable" cellspacing="0" cellpadding="0 ">
+				<tr>
+					<th>Assignments</th>
+					<th>Project Name</th>
+					<th>Date</th>
+					<th>View</th>
+				</tr>
+				<tr align="center">
+					<td class="list">evernote.com</td>
+					<td class="list">amit@labnol</td>
+					<td class="list">10/18/2019</td>
+					<td class="list"><img class="view" src="img/view.png"/></td>
+				</tr>
+				<tr align="center">
+					<td class="list">evernote.com</td>
+					<td class="list">amit@labnol</td>
+					<td class="list">10/18/2019</td>
+					<td class="list"><img class="view" src="img/view.png"/></td>
+				</tr>
+				<tr align="center">
+					<td class="list">evernote.com</td>
+					<td class="list">amit@labnol</td>
+					<td class="list">10/18/2019</td>
+					<td class="list"><img class="view" src="img/view.png"/></td>
+				</tr>
+				<tr align="center">
+					<td class="list">evernote.com</td>
+					<td class="list">amit@labnol</td>
+					<td class="list">10/18/2019</td>
+					<td class="list"><img class="view" src="img/view.png"/></td>
+				</tr>
+				<tr align="center">
+					<td class="list">evernote.com</td>
+					<td class="list">amit@labnol</td>
+					<td class="list">10/18/2019</td>
+					<td class="list"><img class="view" src="img/view.png"/></td>
+				</tr>
+				<tr align="center">
+					<td class="list">evernote.com</td>
+					<td class="list">amit@labnol</td>
+					<td class="list">10/18/2019</td>
+					<td class="list"><img class="view" src="img/view.png"/></td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			var current = 0;
+			var viewlist = document.getElementsByClassName('view')
+			for(i=0;i<viewlist.length;i++){
+				viewlist[i].onclick = function(){
+					current = (current+180)%360;
+					this.style.transform = 'rotate('+current+'deg)';
+					var oldTr = this.parentNode.parentNode;
+					if(current == 180){
+						$('<tr class="newTr"><td  colspan="3"><div class="newDiv"><p>Description:</p><p>This project is a practical project completed by the team during the period of mental education. The team consists of 5 people. I am mainly responsible for project planning, test needs analysis, test analysis and summary analysis, system test case design and execution. Manage it all with the test management tool TestDirector.</p><div class="Check"><div><label><input type="radio" name="1" id="" class="a-radio"><span class="b-radio"></span>Completed</label><label><input type="radio" name="1" id="" class="a-radio"><span class="b-radio"></span>Undone</label></div><div><button>Yes</button><button>No</button></div></div><textarea placeholder="Need to explain, Please enter here"></textarea></div></td><td align="left" valign="top"><p>Personnel</p><img title="Liu" src="img/highway.png"/><img title="Jack" src="img/ing.jpg"/><img title="Cody" src="img/group_photo.jpg"/></td></tr>').insertAfter($(oldTr));
+					}else if(current !== 180){
+						var newTr = document.getElementsByClassName("newTr")
+						for(i=0;i<newTr.length;i++){
+						     //删除元素 元素.parentNode.removeChild(元素);
+						    if (newTr[i] != null) 
+						          newTr[i].parentNode.removeChild(newTr[i]); 
+						}
+
+					}
+				}
+			}
+		};
+	</script>
+</html>

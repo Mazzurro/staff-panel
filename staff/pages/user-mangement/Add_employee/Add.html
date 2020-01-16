@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Add_employee</title>
+		<link rel="stylesheet" type="text/css" href="add.css"/>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<div class="background logo background-fixed"></div>
+		<div id="out" class="out"></div>
+		<div id="add"></div>
+		<div id="Large_form">
+			<div class="center_from">
+				<div class="cen_from">
+					<div class="input_file">
+						Photo:
+						<span id="preview">
+							<input type="file" accept="image/*" id="file">
+						</span>
+					</div>
+					<div class="input_i">First Name:<input class="inputVal" type="text" /></div>
+					<div class="input_i">Last Name:<input class="inputVal" type="text" /></div>
+					<div class="add_select">
+						<span>
+							Department:<select size="1">
+								<option value="1">Department</option>
+								<option value="2">ITA</option>
+								<option value="3">ITB</option>
+								<option value="4">ITC</option>
+							</select>
+						</span>
+						<span>
+							Role:<select style=" margin-left:70px;" size="1">
+								<option value="1">Role</option>
+								<option value="2">painter</option>
+								<option value="3">writer</option>
+								<option value="4">Singer</option>
+								<option value="5">Dancer</option>
+							</select>
+						</span>
+					</div>
+					<div class="level" style="margin-bottom:0;padding-left: 98px;">
+						<div>Clearance Level:
+							<select class="lev" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
+					<div class="input_i">UserName:<input class="inputVal" type="text" /></div>
+					<div class="input_i">Password:<input class="inputVal" style="margin-left: 17px;padding-left: 10px;" type="password" /></div>
+					<div style="padding-left: 20px;">
+						<button id="submit">submit</button>
+						<button id="close">cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" onclick="cc()">cc</a>
+	</body>
+</html>
+<script type="text/javascript">
+//	window.onload = function() {
+		var employeeList = [
+			{name:"William Jafferson Clinton",photourl:"./img/ing.jpg"},
+			{name:"Jafferson Clinton",photourl:"./img/ing.jpg"},
+			{name:"Clinton Jafferson ",photourl:"./img/group_photo.jpg"},
+			{name:"Jafferson Jafferson Clinton",photourl:"./img/highway.png"},
+			{name:"William Jafferson Clinton",photourl:"./img/group_photo.jpg"},
+			{name:"William Jafferson Clinton",photourl:"./img/ing.jpg"},
+			{name:"William Jafferson ",photourl:"./img/highway.png"},
+			{name:"William Clinton",photourl:"./img/ing.jpg"},
+		]
+		$("#submit").click(function(){
+			var filePathList = [];
+			$('.inputVal').each(function(){
+				var filePath = $(this).val()
+				filePathList.push(filePath)
+			})
+			for (var i = 0;i<filePathList.length;i++) {
+				if(filePathList[0] == ""){
+					alert("First Name cannot be empty");
+					return;
+				}else if(filePathList[1] == ""){
+					alert("Last Name cannot be empty");
+					return;
+				}else if(filePathList[2] == ""){
+					alert("UserName cannot be empty");
+					return;
+				}else if(filePathList[3] == ""){
+					alert("Password cannot be empty");
+					return;
+				}
+			}
+			employeeList.push({name:filePathList[0]+filePathList[1],photourl:"./img/ing.jpg"})
+			console.log(employeeList)
+			$("#Large_form").css('display','none');
+		})
+		var outHtml = document.getElementById("out")
+		for (var i = 0;i<employeeList.length;i++) {
+			outHtml.innerHTML += `
+					<div class="Small_form">
+					<p>${employeeList[i].name}</p>
+					<div class="center_row">
+						<div class="Photo" style="background-image: url(${employeeList[i].photourl});"></div>
+						<div class="select">
+							<select size="1">
+								<option value="1">Department</option>
+								<option value="2">ITA</option>
+								<option value="3">ITB</option>
+								<option value="4">ITC</option>
+							</select>
+							<select size="1">
+								<option value="1">Role</option>
+								<option value="2">painter</option>
+								<option value="3">writer</option>
+								<option value="4">Singer</option>
+								<option value="5">Dancer</option>
+							</select>
+						</div>
+					</div>
+					<div style="text-align: center;margin-bottom: 10px;">
+						<label>
+							<input type="radio" name=${i} id="checkbox" class="a-radio">
+							<span class="b-radio"></span>Has Left The Company
+						</label>
+					</div>
+					<div class="level">
+						<div>Clearance Level:
+							<select class="lev" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			`
+			var old = null; //用来保存原来的对象
+			$('.a-radio').each(function(){//循环绑定事件
+				if(this.checked){
+					old = this; //如果当前对象选中，保存该对象
+				}
+				this.onclick = function(){
+					if(this == old){//如果点击的对象原来是选中的，取消选中
+						this.checked = false;
+						old = null;
+					} else{
+						old = this;
+					}
+				}
+			});
+		}
+		$('#file').on('change', function() {//当chooseImage的值改变时，执行此函数
+			var filePath = $(this).val(); //获取到input的value，里面是文件的路径
+			fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),
+			src = window.URL.createObjectURL(this.files[0]); //转成可以在本地预览的格式
+			// 检查是否是图片
+			if(!fileFormat.match(/.png|.jpg|.jpeg/)) {
+			  	error_prompt_alert('The format of the uploaded file is incorrect.');
+			 	return;
+			}else{
+			 	$('#preview').css('background-image','url('+src+')');
+			}
+		});
+		$("#add").click(function(){
+			$("#Large_form").css('display','block')
+		})
+		$("#close").click(function(){
+			$("#Large_form").css('display','none');
+			$('#preview').css('background-image','url(img/Photoadd.png)');
+		})
+//	};
+	function cc(){
+		$.ajax({
+	            type: "POST",
+	            url: "/staff/api/sessions",
+	            data:{page:'',title:'ip',value:'59.188.224.142'},
+	            success: function(data){
+	             	console.log(data)
+	            }
+        });
+	}
+</script>

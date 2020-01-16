@@ -1,0 +1,49 @@
+[12-Jan-2019 08:09:07 UTC] PHP Notice:  Undefined offset: 5 in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/report.php on line 6
+[12-Jan-2019 08:09:10 UTC] PHP Notice:  Undefined offset: 5 in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/report.php on line 6
+[12-Jan-2019 08:09:13 UTC] PHP Notice:  Undefined offset: 5 in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/report.php on line 6
+[12-Jan-2019 08:09:14 UTC] PHP Notice:  Undefined offset: 5 in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/report.php on line 6
+[12-Jan-2019 08:11:14 UTC] PHP Notice:  Undefined offset: 5 in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/report.php on line 6
+[12-Jan-2019 08:11:48 UTC] PHP Notice:  Undefined offset: 5 in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/report.php on line 6
+[12-Jan-2019 08:11:49 UTC] PHP Notice:  Undefined offset: 5 in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/report.php on line 6
+[23-Jan-2019 05:58:09 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 157
+[23-Jan-2019 05:58:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 157
+[23-Jan-2019 05:58:09 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 170
+[23-Jan-2019 05:58:09 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 170
+[23-Jan-2019 05:58:09 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 182
+[23-Jan-2019 05:58:09 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 182
+[23-Jan-2019 06:11:28 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 157
+[23-Jan-2019 06:11:28 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 157
+[23-Jan-2019 06:11:28 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 170
+[23-Jan-2019 06:11:28 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 170
+[23-Jan-2019 06:11:28 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 182
+[23-Jan-2019 06:11:28 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 182
+[23-Jan-2019 06:32:47 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 157
+[23-Jan-2019 06:32:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 157
+[23-Jan-2019 06:32:47 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 170
+[23-Jan-2019 06:32:47 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 170
+[23-Jan-2019 06:32:47 UTC] PHP Notice:  Undefined index: assignmentID in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 182
+[23-Jan-2019 06:32:47 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/genData.php on line 182
+[25-Jan-2019 08:19:02 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php on line 35
+[25-Jan-2019 08:21:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php on line 35
+[25-Jan-2019 08:21:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php on line 35
+[25-Jan-2019 08:21:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php on line 35
+[25-Jan-2019 08:22:45 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php on line 35
+[25-Jan-2019 08:45:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on boolean in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php:35
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/s/report/browse.php on line 35

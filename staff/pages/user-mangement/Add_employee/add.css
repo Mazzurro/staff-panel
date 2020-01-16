@@ -1,0 +1,234 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #141415;
+}
+.background.logo {
+    background-image: url(https://72dragons.com/images/72Dragons-solologo.png);
+    opacity: 0.15;
+    filter: blur(10px);
+}
+.panel-background, .background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+.background-fixed {
+    position: fixed;
+}
+#add{
+	position: fixed;
+	bottom: 36px;
+    right: 40px;
+	height: 50px;
+	width: 50px;
+	background-image: url(img/add.png);
+	background-position: center;
+    background-size: cover;
+}
+.out{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /*padding-left: 20px;*/
+    padding-top: 20px;
+}
+.Small_form{
+    background: black;
+    margin: 20px;
+	border: 1px solid #ad9440;
+}
+.Small_form p {
+    background: #141415;
+	padding-left: 10px;
+    font-size: 23px;
+    line-height: 46px;
+    color: #AD9440;
+    border-bottom: 1px solid #ad9440;
+}
+.center_row{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.Photo{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	background-image: url(img/group_photo.jpg);
+	background-position: center;
+    background-size: cover;
+}
+.select{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+select{
+	outline: none;
+	display: block;
+    background: black;
+    border: 1px solid #ad9440;
+    padding-left: 10px;
+    color: white;
+    width: 200px;
+    height: 35px;
+    font-size: 18px;
+}
+.level{
+	color: white;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.level div{
+	display: inline-block;
+	padding: 0 10px;
+    height: 35px;
+    background: black;
+    border: 1px solid #ad9440;
+    line-height: 35px;
+}
+.lev{
+	border: none;
+	display: inline-block;
+    width: 55px;
+    height: 30px;
+}
+label{
+	cursor: pointer;
+	color: white;
+}
+.a-radio{
+    display: none;
+}
+.b-radio{
+	cursor: pointer;
+    display: inline-block;
+    border:1px solid #ccc;
+    width:16px;
+    height: 16px;
+    border-radius:2px;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+}
+.b-radio:before{
+    content: '';
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background: white;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -5px;
+    margin-top: -5px;
+    border-radius: 2px;
+    display: none;
+}
+.a-radio:checked~.b-radio:before{
+    display: block;
+}
+#Large_form{
+	display: none;
+	position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #141415;
+    opacity: 0.95;
+    z-index: 2;
+}
+.input_i input{
+    outline: none;
+    background: black;
+    margin-left: 15px;
+    border: 1px solid #ad9440;
+    color: white;
+    width: 200px;
+    height: 35px;
+    font-size: 18px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.center_from{
+	z-index: 2;
+    width: 400px;
+    height: 538px;
+    background: black;
+    position: fixed;
+    text-align: center;
+    color: white;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+    border: 1px solid #ad9440;
+}
+.cen_from{
+	padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 500px;
+}
+.input_file {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input_file span{
+	display: inline-block;
+	background-image: url(img/Photoadd.png);
+    height: 80px;
+    width: 80px;
+    margin-left: 15px;
+    background-position: center;
+    background-size: cover;
+}
+.add_select{
+	align-items: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.add_select select{
+	display: inline;
+    padding-left: 10px;
+    margin-left: 10px;
+    width: 190px;
+}
+.add_select span:nth-child(2){
+	display: inline-block;
+	width: 100%;
+}
+#file{
+	opacity: 0;	
+	height: 80px;
+    width: 80px;
+}
+#Large_form button{
+	font-size: 17px;
+    cursor: pointer;
+    width: 69px;
+    height: 25px;
+    margin-right: 18px;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    background: #ad9440;
+}
+#Large_form button:hover{
+	cursor: pointer;
+	background: #96031a;
+}

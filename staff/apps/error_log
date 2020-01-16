@@ -1,0 +1,49 @@
+[11-Feb-2019 07:55:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Staffpanel' not found in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 6
+[12-Feb-2019 06:51:04 UTC] PHP Warning:  include(/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php): failed to open stream: No such file or directory in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 06:51:05 UTC] PHP Warning:  include(): Failed opening '/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 06:51:08 UTC] PHP Warning:  include(/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php): failed to open stream: No such file or directory in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 06:51:08 UTC] PHP Warning:  include(): Failed opening '/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 06:52:01 UTC] PHP Warning:  include(/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php): failed to open stream: No such file or directory in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 06:52:01 UTC] PHP Warning:  include(): Failed opening '/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 06:53:14 UTC] PHP Warning:  include(/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php): failed to open stream: No such file or directory in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 06:53:14 UTC] PHP Warning:  include(): Failed opening '/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 07:01:02 UTC] PHP Warning:  include(/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php): failed to open stream: No such file or directory in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[12-Feb-2019 07:01:02 UTC] PHP Warning:  include(): Failed opening '/home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/create/assignment.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 18
+[16-Feb-2019 10:11:30 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[16-Feb-2019 10:11:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function createError() in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 31
+[16-Feb-2019 10:12:13 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[16-Feb-2019 10:12:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function createError() in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/index.php on line 31
+[16-Feb-2019 10:13:17 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 04:49:04 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 05:35:27 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 05:36:54 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 05:39:17 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 05:40:29 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 05:40:36 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 05:40:51 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 05:41:55 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[18-Feb-2019 05:43:19 UTC] PHP Notice:  Trying to get property of non-object in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/api-v1/projects/assignments/assignment.php on line 16
+[20-Mar-2019 08:10:32 UTC] PHP Notice:  Undefined variable: storyItem in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-tasks.php on line 11
+[20-Mar-2019 08:13:33 UTC] PHP Notice:  Undefined variable: storyItem in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-tasks.php on line 11
+[20-Mar-2019 08:16:54 UTC] PHP Notice:  Undefined variable: storyItem in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-tasks.php on line 11
+[20-Mar-2019 08:17:45 UTC] PHP Notice:  Undefined variable: storyItem in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-tasks.php on line 11
+[20-Mar-2019 08:25:02 UTC] PHP Notice:  Undefined variable: storyItem in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-tasks.php on line 18
+[20-Mar-2019 08:25:19 UTC] PHP Notice:  Undefined variable: storyItem in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-tasks.php on line 18
+[22-Mar-2019 03:14:47 UTC] PHP Notice:  Undefined variable: storyItem in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-tasks.php on line 18
+[22-Mar-2019 03:15:35 UTC] PHP Notice:  Undefined variable: storyItem in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-tasks.php on line 18
+[27-Mar-2019 06:27:07 UTC] PHP Notice:  Undefined index: storyID in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-stories.php on line 3
+[27-Mar-2019 06:27:07 UTC] PHP Notice:  Undefined index: storyID in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-stories.php on line 3
+[04-Sep-2019 17:33:45 UTC] PHP Notice:  Undefined index: storyID in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-stories.php on line 3
+[04-Sep-2019 17:33:46 UTC] PHP Notice:  Undefined index: storyID in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-stories.php on line 3
+[04-Sep-2019 17:33:47 UTC] PHP Notice:  Undefined index: storyID in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-stories.php on line 3
+[04-Sep-2019 17:33:49 UTC] PHP Notice:  Undefined index: storyID in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-stories.php on line 3
+[04-Sep-2019 17:49:02 UTC] PHP Notice:  Undefined index: storyID in /home/zdwqjjx28kuw/public_html/72dragons.com/staff/apps/projects/list-stories.php on line 3
