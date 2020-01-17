@@ -496,6 +496,7 @@ var revenueData={
           saleDates: [
                  {rId:'1',date:"2020-01", Units_Sold:"2",Unit_Sold_Stretch_Goal:"3",datesID:"1"},
                  {rId:'2',date:"2020-01", Units_Sold:"3.5",Unit_Sold_Stretch_Goal:"5",datesID:"2"},
+                 {rId:'2',date:"2020-01", Units_Sold:"4",Unit_Sold_Stretch_Goal:"3",datesID:"2"},
                  {rId:'1',date:"2020-02", Units_Sold:"0.5",Unit_Sold_Stretch_Goal:"10",datesID:"3"},
                  {rId:'2',date:"2020-02", Units_Sold:"3",Unit_Sold_Stretch_Goal:"9",datesID:"4"},
                  {rId:'1',date:"2020-03", Units_Sold:"5.5",Unit_Sold_Stretch_Goal:"7",datesID:"5"},

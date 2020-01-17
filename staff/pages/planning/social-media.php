@@ -209,8 +209,11 @@
 	    		<button class="addRunRate">Create run rate</button>
 		        <button class="addAccount">Add new Social Account</button>
 		        <button class="addAuthority">Authority Management</button>
-		        	<select class="bg-search-select" style="width: 20px;margin: 20px 20px 20px 0;">
-		            </select>
+	        	<select class="bg-search-select" style="width: 20px;margin: 20px 20px 20px 0;">
+	        		<ul>
+	        			<li>Please select an account</li>
+	        		</ul>
+	            </select>
 		        	<!--<li>Please select an account</li>
 		        	<li>Please select an account</li>
 		        	<li>Please select an account</li>

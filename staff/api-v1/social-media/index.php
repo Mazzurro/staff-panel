@@ -80,8 +80,8 @@ class Socialmedia{
         	if (!array_key_exists($key, $new_data)) {
                 $new_data[$key] = $value;
             }
-            $end = intval(($value['followers_total'] * pow((pow(($value['followers_total'] / 56) , (1 / (11)))) , (1))));
-            $new_data[$key]['followers'][$value['followers_date']] = ['Start of Month Follower Count'=>$value['followers_total'],'End of Month Follower Count'=>$gg,'of New Followers'=>$gg-$value['followers_total']];
+            $end = intval(($value['followers_total'] * pow((pow(($value['location_required_followers'] / $value['followers_total']) , (1 / (11)))) , (1))));
+            $new_data[$key]['followers'][$value['followers_date']] = ['Start of Month Follower Count'=>$value['followers_total'],'End of Month Follower Count'=>$end,'of New Followers'=>$end-$value['followers_total']];
         }
         return $new_data;
         var_dump($LocationList);
