@@ -1,6 +1,6 @@
 
 <?php echo $_POST["assignmentID"]; ?>
-<div class="panel panel-popup" id="Run-Rate-creation">
+<div class="panel panel-popup" id="NewAccount-creation">
     <div class="box">
     		<div class="box-head">
                 <h4>Add new Social Account</h4>
@@ -60,7 +60,7 @@
         color: #ad9440;
     }
     dropdown.active{
-    	height: 155px;
+	    height: 250px;
     }
     .box {
 	    height: 56%;
@@ -70,16 +70,8 @@
                   $(document).ready(function () {
                      setSelectInput('#assignment-creation');
                      $(".box-head-alt").click(function(){
-                         $('#Run-Rate-creation').parent().remove();
+                         $('#NewAccount-creation').parent().remove();
                      })
-                     
-                     $.ajax({
-                            type:"POST",
-                            url:"http://192.168.50.90/staff/api/Socialmedia/AccountsList",
-                            success:function(data){
-                            	console.log(data)
-                            }
-                        })    
                     //加载type下拉框
                     $.ajax({
                         type:"POST",
@@ -133,19 +125,9 @@
                       })
 
                          $('.createRun_Rate').click(function () {
-                          let Account_name=$('input[name=category_name_id]').val();
-                          if($('input[name=category_types_id]').val() == 1){
-                          		let Account_type ="Facebook"
-                          }else if($('input[name=category_types_id]').val() == 2){
-                          		let Account_type ="Youtube"
-                          }else{
-                          		let Account_type ="Instagram"
-                          }
-                          let Account_type=$('input[name=category_types_id]').val();
-                          let Account_uesr=$('input[name=category_users_id]').val();
-                          console.log(Account_name);
-                          console.log(Account_type);
-                          console.log(Account_uesr);
+                          let Account_name = $('input[name=category_name_id]').val();
+                          let Account_type = $('input[name=category_types_id]').val()
+                          let Account_uesr = $('input[name=category_users_id]').val();
                           /*console.log(country);
                           console.log(additional_cost.length);
                           console.log(low_cost.length);
@@ -158,21 +140,30 @@
                           }else if(Account_uesr=="" || Account_uesr==null){
                             addNotif("Unable to create an account", "Please select Account_uesr from the drop-down box!", 2);
                           }else{
-                            paneljs.fetch({type:'api', call:'http://192.168.50.90/staff/api/Socialmedia/AccountsList', postData:{
+                            paneljs.fetch({type:'api', call:'/Socialmedia/createAccounts', postData:{
                                    social_media_account_name: Account_name,
                                    social_media_account_type: Account_type,
                                    social_media_account_owner: Account_uesr,
                                }}, (data) => {
                                    console.log(data);
                                    addNotif("Create the run-rates", "Create successfully", 1);
-                                   $('#Run-Rate-creation').addClass('float-fade-out');
-                                   $('#Run-Rate-creation').find('.float-fade-out').addClass('float-fade-out');
-                                   $('panel-content').children('.panel-popup-active').removeClass('panel-popup-active');
-                                   setTimeout(function () {
-                                       $('#Run-Rate-creation').parent().remove();
-                                       //加载页面，按照传送不同的参数加载页面
-                                       loadContent('social-media', {}, 0)
-                                   },750);
+                                   $("#NewAccount-creation").css("display","none")
+//                                 $('#Run-Rate-creation').addClass('float-fade-out');
+//                                 $('#Run-Rate-creation').find('.float-fade-out').addClass('float-fade-out');
+                                   $.ajax({
+			                            type:"POST",
+			                            url:"http://192.168.50.90/staff/api/Socialmedia/AccountsList",
+			                            success:function(data){
+			                            	console.log(data)
+			                            }
+			                        })  
+                                   
+//                                 $('panel-content').children('.panel-popup-active').removeClass('panel-popup-active');
+//                                 setTimeout(function () {
+//                                     $('#Run-Rate-creation').parent().remove();
+//                                     //加载页面，按照传送不同的参数加载页面
+//                                     loadContent('social-media', {}, 0)
+//                                 },750);
                                });
                           }
                      });

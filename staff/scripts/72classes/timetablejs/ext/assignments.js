@@ -719,7 +719,6 @@ class TimeTableAssignments extends TimeTable {
 
                     if (rowsData[itme].type == "Saga") {
                         str+=`${rowsData[itme].title}`;
-
                         for (let j in rowsData[itme].children) {
                             if (rowsData[j].rowID==j){
                                 str+=`\n,${rowsData[j].title+'\n'}`;
@@ -745,8 +744,6 @@ class TimeTableAssignments extends TimeTable {
                             }
                             {sagaid[itme]=rowsData[itme].children}
                             /*for (let Story in epic.children){
-                                console.log("***
-                                ******")
                                 console.log(Story)
                             }*/
                         }

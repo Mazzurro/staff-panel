@@ -293,8 +293,8 @@
             <div class="monthContainer jan">
                 <h4>2020-01</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="jan" >9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="jan_Unit_Sold" >10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -308,8 +308,8 @@
             <div class="monthContainer feb">
                 <h4>2020-02</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="feb" >9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="feb_Unit_Sold" >10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -319,11 +319,11 @@
                     <timetable-month><span>Stretch Sales Income</span></timetable-month>
                 </timetable>
             </div>
-            <div class="monthContainer feb">
+            <div class="monthContainer mar">
                 <h4>2020-03</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="mar">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="mar_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -336,8 +336,8 @@
             <div class="monthContainer apr">
                 <h4>2020-04</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="apr">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="apr_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -350,8 +350,8 @@
             <div class="monthContainer may">
                 <h4>2020-05</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="may">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="may_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -364,8 +364,8 @@
             <div class="monthContainer jun">
                 <h4>2020-06</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="jun">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="jun_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -378,8 +378,8 @@
             <div class="monthContainer july">
                 <h4>2020-07</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="july">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="july_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -392,8 +392,8 @@
             <div class="monthContainer aug">
                 <h4>2020-08</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="july">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -406,8 +406,8 @@
             <div class="monthContainer sept">
                 <h4>2020-09</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="sept">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="sept_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -420,8 +420,8 @@
             <div class="monthContainer oct">
                 <h4>2020-10</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="oct">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="oct_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -434,8 +434,8 @@
             <div class="monthContainer nov">
                 <h4>2020-11</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="nov">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="nov_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -449,8 +449,8 @@
             <div class="monthContainer dec">
                 <h4>2020-12</h4>
                 <timetable>
-                    <timetable-month-head>9 Units Sold</timetable-month-head>
-                    <timetable-month-head>10 Unit Sold</timetable-month-head>
+                    <timetable-month-head id="dec">9 Units Sold</timetable-month-head>
+                    <timetable-month-head id="dec_Unit_Sold">10 Unit Sold</timetable-month-head>
                     <timetable-month-head>$1028(USD)</timetable-month-head>
                     <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -464,8 +464,8 @@
             <div class="monthContainer totals">
                  <h4>2020 Sales Totals</h4>
                  <timetable>
-                     <timetable-month-head>9 Units Sold</timetable-month-head>
-                     <timetable-month-head>10 Unit Sold</timetable-month-head>
+                     <timetable-month-head id="totals">9 Units Sold</timetable-month-head>
+                     <timetable-month-head id="month_totals">10 Unit Sold</timetable-month-head>
                      <timetable-month-head>$1028(USD)</timetable-month-head>
                      <timetable-month-head>$8335(USD)</timetable-month-head>
 
@@ -481,20 +481,8 @@
 <script type="text/javascript">
 
 $(document).ready(function (){
-var monthData=[
-    {janMonth:{1:{UnitSold:2,UnitSoldStretchGoal:3},2:{UnitSold:21,UnitSoldStretchGoal:5}}},
-    {febMonth:{1:{UnitSold:5,UnitSoldStretchGoal:12},2:{UnitSold:1,UnitSoldStretchGoal:7}}},
-    {marMonth:{1:{UnitSold:5,UnitSoldStretchGoal:31},2:{UnitSold:22,UnitSoldStretchGoal:12}}},
-    {aprMonth:{1:{UnitSold:3,UnitSoldStretchGoal:2},2:{UnitSold:5,UnitSoldStretchGoal:5}}},
-    {mayMonth:{1:{UnitSold:6,UnitSoldStretchGoal:12},2:{UnitSold:1,UnitSoldStretchGoal:7}}},
-    {junMonth:{1:{UnitSold:8,UnitSoldStretchGoal:12},2:{UnitSold:33,UnitSoldStretchGoal:21}}},
-    {julyMonth:{1:{UnitSold:11,UnitSoldStretchGoal:12},2:{UnitSold:11,UnitSoldStretchGoal:31}}},
-    {augMonth:{1:{UnitSold:13,UnitSoldStretchGoal:18},2:{UnitSold:11,UnitSoldStretchGoal:31}}},
-    {septMonth:{1:{UnitSold:13,UnitSoldStretchGoal:1},2:{UnitSold:1,UnitSoldStretchGoal:7}}},
-    {octMonth:{1:{UnitSold:25,UnitSoldStretchGoal:5},2:{UnitSold:9,UnitSoldStretchGoal:11}}},
-    {novMonth:{1:{UnitSold:36,UnitSoldStretchGoal:7},2:{UnitSold:2,UnitSoldStretchGoal:17}}},
-    {decMonth:{1:{UnitSold:51,UnitSoldStretchGoal:6},2:{UnitSold:1,UnitSoldStretchGoal:7}}}
-]
+
+//模拟数据
 var revenueData={
           revenueDates:[
             {rId:"1",product:"Art",Services:"Art Website",Clients:"Marcy and Sons",remove_Origin:"Hong Kong",revenue_Destination:"Shenzhen",Unit_Value_USD:"1000",Unit_Value_Local_Currency:"112"},
@@ -506,38 +494,126 @@ var revenueData={
             {rId:"7",product:"Electronic Communication Products",Services:"Instagram Management",Clients:"buffett",remove_Origin:"Hong Kong",revenue_Destination:"New York",Unit_Value_USD:"1500",Unit_Value_Local_Currency:"1735"},
           ],
           saleDates: [
-                 {rId:'1',date:"2021-01", Units_Sold:"2","Unit Sold (Stretch Goal)":"3"},
-                 {rId:'2',date:"2021-02", Units_Sold:"3.5","Unit Sold (Stretch Goal)":"5"},
-                 {rId:'3',date:"2021-03", Units_Sold:"0.5","Unit Sold (Stretch Goal)":"10"},
-                 {rId:'4',date:"2021-04", Units_Sold:"1.3","Unit Sold (Stretch Goal)":"3"},
-                 {rId:'5',date:"2021-05", Units_Sold:"2.1","Unit Sold (Stretch Goal)":"4"},
-                 {rId:'6',date:"2021-06", Units_Sold:"1.5","Unit Sold (Stretch Goal)":"3"},
-                 {rId:'7',date:"2021-07", Units_Sold:"0.5","Unit Sold (Stretch Goal)":"2"},
+                 {rId:'1',date:"2020-01", Units_Sold:"2",Unit_Sold_Stretch_Goal:"3",datesID:"1"},
+                 {rId:'2',date:"2020-01", Units_Sold:"3.5",Unit_Sold_Stretch_Goal:"5",datesID:"2"},
+                 {rId:'1',date:"2020-02", Units_Sold:"0.5",Unit_Sold_Stretch_Goal:"10",datesID:"3"},
+                 {rId:'2',date:"2020-02", Units_Sold:"3",Unit_Sold_Stretch_Goal:"9",datesID:"4"},
+                 {rId:'1',date:"2020-03", Units_Sold:"5.5",Unit_Sold_Stretch_Goal:"7",datesID:"5"},
+                 {rId:'2',date:"2020-03", Units_Sold:"3",Unit_Sold_Stretch_Goal:"7",datesID:"6"},
+                 {rId:'1',date:"2020-04", Units_Sold:"1.3",Unit_Sold_Stretch_Goal:"3",datesID:"7"},
+                 {rId:'2',date:"2020-04", Units_Sold:"10",Unit_Sold_Stretch_Goal:"4",datesID:"8"},
+                 {rId:'1',date:"2020-05", Units_Sold:"1.5",Unit_Sold_Stretch_Goal:"3",datesID:"9"},
+                 {rId:'2',date:"2020-05", Units_Sold:"6.5",Unit_Sold_Stretch_Goal:"2",datesID:"10"},
+                 {rId:'3',date:"2020-05", Units_Sold:"66",Unit_Sold_Stretch_Goal:"2",datesID:"10"},
           ]
 };
-            var revenue=revenueData.revenueDates;
-            var revenueMonth=revenueData.saleDates;
-            console.log(revenueData.revenueDates);
-            /*console.log(monthData);*/
+            var revenue=revenueData.revenueDates;//主表
+            var revenueMonth=revenueData.saleDates;//月表
 
-            for(var i=0;i<monthData.length;i++){
-                /*console.log("属性名：",monthData[i]);*/
-                /*console.log(Object.keys(monthData[i]));*/
+
+            for(let item in revenue){
+                console.log("主表：",revenue[item]);
+                /*for(let item in revenueMonth){//item 表示json数组中某个对象*/
+                    for(let j in revenueMonth){//j表示json对象中的key
+                        /*console.log(j);*/
+
+                        console.log("第二层循环：");
+                        console.log(revenueMonth);
+                        console.log(revenueMonth[j].date);
+                        console.log(revenueMonth[j].rId);
+                        /*console.log(revenue[item].rId);
+                        console.log(revenueMonth[item].rId);*/
+                        switch(revenueMonth[j].date){
+                            case "2020-01":
+                            console.log("一月份id：",revenueMonth[j].rId,"主要ID",revenue[j].rId);
+                                if(revenue[item].rId==revenueMonth[j].rId){
+                                    console.log(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                    monthDataUnitSold(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                }
+                            break;
+                            case "2020-02":
+                            console.log("二月份id：",revenueMonth[item].rId,"主要ID",revenue[item].rId);
+                                if(revenue[item].rId==revenueMonth[j].rId){
+                                    console.log(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                    monthDataUnitSold(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                }
+                            break;
+                            case "2020-03":
+                                console.log("三月份id：",revenueMonth[item].rId,"主要ID",revenue[item].rId);
+                                if(revenue[item].rId==revenueMonth[j].rId){
+                                    console.log(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                    monthDataUnitSold(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                }
+                            break;
+                            case "2020-04":
+                                console.log("四月份id：",revenueMonth[item].rId,"主要ID",revenue[item].rId);
+                                if(revenue[item].rId==revenueMonth[j].rId){
+                                    console.log(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                    monthDataUnitSold(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                }
+                            break;
+                            case "2020-05":
+                                console.log("五月份id：",revenueMonth[item].rId,"主要ID",revenue[item].rId);
+                                if(revenue[item].rId==revenueMonth[j].rId){
+                                    console.log(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                    monthDataUnitSold(revenueMonth[j].date,revenue[item].Unit_Value_USD,revenueMonth[j].Units_Sold,revenueMonth[j].Unit_Sold_Stretch_Goal);
+                                }
+                            break;
+                        }
+
+
+                        //满足条件:月份表中的为2020-01的数据
+                       /*if(revenueMonth[item][j]=="2020-01"){//revenueMonth[item][j] 表示json中value*/
+                            /*console.log("if判断111");
+                            console.log(revenueMonth[item].rId);
+                            console.log(revenue[item].rId);*/
+                            //满足条件:主表中的rId等于月份表中的rId时
+                            /*if(revenue[item].rId==revenueMonth[item].rId){*/
+                                /*console.log("if判断222");
+                                console.log("主表22：",revenue[item].rId,revenue[item].Unit_Value_USD);
+                                console.log("月份22：",revenueMonth[item]);
+                                console.log("月份22：",revenueMonth[item].Units_Sold,revenueMonth[item].Unit_Sold_Stretch_Goal);*/
+
+                                /*月份：revenueMonth[item].date、
+                                  主表列：revenue[item].Unit_Value_USD、
+                                  月份表列：Units_Sold、Unit Sold (Stretch Goal)
+                                */
+                               /*monthDataUnitSold(revenueMonth[item].date,revenue[item].Unit_Value_USD,revenueMonth[item].Units_Sold,revenueMonth[item].Unit_Sold_Stretch_Goal);
+                            }*/
+                       /*}else if(revenueMonth[item][j]=="2020-02"){
+                            console.log("//////二月if判断///////");
+                            console.log(revenueMonth[item].rId);
+                            console.log(revenue[item].rId);
+                            //满足条件:主表中的rId等于月份表中的rId时
+                            if(revenue[item].rId==revenueMonth[item].rId){
+                                console.log("//////if判断222////////");
+                                console.log("主表22：",revenue[item].rId,revenue[item].Unit_Value_USD);*/
+                                /*console.log("月份22：",revenueMonth[item]);*/
+                                /*console.log("月份22：",revenueMonth[item].Units_Sold,revenueMonth[item].Unit_Sold_Stretch_Goal);
+                                var jValue=revenueMonth[item];//value所对应的对象
+                                console.log("/////////////////////////////////////////////");*/
+                                /*月份：revenueMonth[item].date、
+                                  主表列：revenue[item].Unit_Value_USD、
+                                  月份表列：Units_Sold、Unit Sold (Stretch Goal)
+                                */
+                                /*console.log(revenueMonth[item].date,revenue[item].Unit_Value_USD,revenueMonth[item].Units_Sold,revenueMonth[item].Unit_Sold_Stretch_Goal);
+                               console.log("////////////////////////////////////结束////////////////////////////////////////")
+                               monthDataUnitSold(revenueMonth[item].date,revenue[item].Unit_Value_USD,revenueMonth[item].Units_Sold,revenueMonth[item].Unit_Sold_Stretch_Goal);
+                            }
+                       }*/
+                    }
+                /*}*/
+          }
+            /*for(var i=0;i<monthData.length;i++){
                 if(Object.keys(monthData[i])=="janMonth"){
                     console.log("一月");
                     for(let item in monthData[i].janMonth){
-                        /*console.log(monthData[i].janMonth[item].UnitSold);*/
+
                         monthDataUnitSold(1000,monthData[i].janMonth[item].UnitSold,monthData[i].janMonth[item].UnitSoldStretchGoal);
                     }
                 }
-                /*if(Object.keys(monthData[i])=="febMonth"){
-                    console.log("二月");
-                    for(let item in monthData[i].febMonth){
-                        console.log(monthData[i].febMonth[item].UnitSold);
-                        monthDataUnitSold(2000,monthData[i].febMonth[item].UnitSold,monthData[i].febMonth[item].UnitSoldStretchGoal);
-                    }
-                }*/
-            };
+
+            };*/
             //遍历主表格
             for(let item in revenue){
                 $('.revenue_Container timetable').append(`
@@ -551,21 +627,61 @@ var revenueData={
                  <div class="timetable-data">${revenue[item].Unit_Value_Local_Currency}</div>`);
             }
 
-            //遍历月份表格，第一个表price价格，UnitSold(列)、UnitSoldStretchGoal(列)
-            function monthDataUnitSold(price,UnitSold,UnitSoldStretchGoal){
-                 console.log(price);
-                 console.log(UnitSold);
-                 console.log(UnitSoldStretchGoal);
+            /*遍历月份表格
+            月份表格的日期：rMonth、价格：price
+            月份表的列：UnitSold(列)、UnitSoldStretchGoal(列)
+            */
+            function monthDataUnitSold(rMonth,price,UnitSold,UnitSoldStretchGoal){
+                 console.log("形参：",rMonth,price,UnitSold,UnitSoldStretchGoal)
+                 /*console.log(UnitSold);
+                 console.log(UnitSoldStretchGoal);*/
                  let resultData=price*UnitSold;
                  let resultDataP=price*UnitSoldStretchGoal;
 
-                 console.log($('.monthContainer h4').text());
+                 switch(rMonth){
+                    case "2020-01":
+                        console.log("go 2020-01：添加1月数据");
+                        $(".jan timetable").append(`
+                       <div class="timetable-data fanhuiBtn" data-slotID="1" data-column="2020-01"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSold}"/></div>
+                       <div class="timetable-data fanhuiBtn" data-slotID="2" data-column="2020-01"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSoldStretchGoal}"/></div>
+                       <div class="timetable-data" revenue_id="3" >${resultData}</div>
+                       <div class="timetable-data" revenue_id="4">${resultDataP}</div>`);
+                    break;
+                    case "2020-02":
+                        console.log("go 2020-02：添加二月数据");
+                        $(".feb timetable").append(`
+                       <div class="timetable-data fanhuiBtn" data-slotID="1" data-column="2020-02"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSold}"/></div>
+                       <div class="timetable-data fanhuiBtn" data-slotID="2" data-column="2020-02"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSoldStretchGoal}"/></div>
+                       <div class="timetable-data" revenue_id="3" >${resultData}</div>
+                       <div class="timetable-data" revenue_id="4">${resultDataP}</div>`);
+                    break;
+                    case "2020-03":
+                        console.log("go 2020-03：添加三月数据");
+                        $(".mar timetable").append(`
+                       <div class="timetable-data fanhuiBtn" data-slotID="1" data-column="2020-03"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSold}"/></div>
+                       <div class="timetable-data fanhuiBtn" data-slotID="2" data-column="2020-03"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSoldStretchGoal}"/></div>
+                       <div class="timetable-data" revenue_id="3" >${resultData}</div>
+                       <div class="timetable-data" revenue_id="4">${resultDataP}</div>`);
+                    break;
+                    case "2020-04":
+                        console.log("go 2020-03：添加三月数据");
+                        $(".apr timetable").append(`
+                       <div class="timetable-data fanhuiBtn" data-slotID="1" data-column="2020-04"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSold}"/></div>
+                       <div class="timetable-data fanhuiBtn" data-slotID="2" data-column="2020-03"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSoldStretchGoal}"/></div>
+                       <div class="timetable-data" revenue_id="3" >${resultData}</div>
+                       <div class="timetable-data" revenue_id="4">${resultDataP}</div>`);
+                    break;
+                    case "2020-05":
+                        console.log("go 2020-03：添加三月数据");
+                        $(".may timetable").append(`
+                       <div class="timetable-data fanhuiBtn" data-slotID="1" data-column="2020-03"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSold}"/></div>
+                       <div class="timetable-data fanhuiBtn" data-slotID="2" data-column="2020-03"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSoldStretchGoal}"/></div>
+                       <div class="timetable-data" revenue_id="3" >${resultData}</div>
+                       <div class="timetable-data" revenue_id="4">${resultDataP}</div>`);
+                    break;
 
-                 $('.monthContainer timetable').append(`
-                   <div class="timetable-data fanhuiBtn" data-slotID="1" data-column="2020-01"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSold}"/></div>
-                   <div class="timetable-data fanhuiBtn" data-slotID="2" data-column="2020-01"><input  oninput="updateInput(this,${price})" readonly="true" value="${UnitSoldStretchGoal}"/></div>
-                   <div class="timetable-data" revenue_id="3" >${resultData}</div>
-                   <div class="timetable-data" revenue_id="4">${resultDataP}</div>`);
+                 }
+
 
             };
                 $(".monthContainer timetable .fanhuiBtn").on("dblclick", function () {
@@ -594,7 +710,6 @@ var revenueData={
                }
             //编辑Revenue
             $(document).on('click',"#update_Revenue",function(){
-             /*$("#update_Revenue").click(function(){*/
                 console.log("编辑");
                 var dataId=$(this).attr("data-id");
                 var products=$(this).next().text();
@@ -604,14 +719,6 @@ var revenueData={
                 var revenueDestination=$(this).next().next().next().next().next().text();
                 var Unit_Value_USD=$(this).next().next().next().next().next().next().text();
                 var Unit_Value_Local_Currency=$(this).next().next().next().next().next().next().next().text();
-                console.log(dataId);
-                console.log(products);
-                console.log(serviceData);
-                console.log(clientsData);
-                console.log(revenueOrigin);
-                console.log(revenueDestination);
-                console.log(Unit_Value_USD);
-                console.log(Unit_Value_Local_Currency);
                     $('#revenue_Container').addClass('panel-popup-active loading');
                     let randAppID = paneljs.genID(5);
                     $('#revenue_Container').append(`<div id="app-`+randAppID+`"></div>`);
@@ -674,15 +781,6 @@ var revenueData={
                         case "dd-month-revenueincome":
                                 console.log("显示month-revenueincome");
                                 $(".box-list-Community .update-date").filter(":Contains("+searchValue+")").closest('.box-list-Community').show();
-                            break;
-                        case "dd-month":
-                                $(".monthContainer").hide();
-                                if(searchValue!=""){
-                                  //筛选.monthContainer h4中是否包含输入值，如果包含显示，否则隐藏
-                                  $(".monthContainer h4").filter(":Contains("+searchValue+")").parent().show();
-                                }else{
-                                  $(".monthContainer").show();
-                                }
                             break;
                         default:
                             console.log("default");

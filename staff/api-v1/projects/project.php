@@ -122,6 +122,7 @@ class Project {
     }
 
     public static function assignToProject($staffList) {
+        // var_dump($staffList);exit;
         $insertQuery = '';
         foreach($staffList as $key => $item) {
             if (!isValidNumber($key) || !isValidNumber($item)) return Staffpanel::createError('400','Invalid ID','One or many of the ids provided are invalid.');

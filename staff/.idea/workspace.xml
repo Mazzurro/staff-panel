@@ -19,6 +19,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1SaSh2112216X3vONN4DZGSbuYk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -32,14 +33,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="Z:\staff\staff\media\images\avatars" />
-      <recent name="Z:\staff\staff" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Z:\staff\staff" />
       <recent name="Z:\staff\staff\scripts\72classes\timetablejs\ext" />
       <recent name="Z:\staff\staff\api-v1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\staff\staff\media\images\avatars" />
+      <recent name="Z:\staff\staff" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,11 +154,26 @@
       <workItem from="1579055258215" duration="178000" />
       <workItem from="1579055445233" duration="3155000" />
       <workItem from="1579067171615" duration="6256000" />
-      <workItem from="1579140764246" duration="17045000" />
+      <workItem from="1579140764246" duration="23498000" />
+      <workItem from="1579227201638" duration="7725000" />
+      <workItem from="1579235243917" duration="19559000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

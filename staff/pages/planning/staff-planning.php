@@ -201,17 +201,210 @@
 //     }
 // }
 //loading list data
+function getMonthlyData(sDate,eDate){
+    var sYear=parseInt(sDate.split('-')[0])
+    var sMonth=parseInt(sDate.split('-')[1])
+    var eYear=parseInt(eDate.split('-')[0])
+    var eMonth=parseInt(eDate.split('-')[1])
+    var monthLength=(eYear-sYear)*12+(eMonth-sMonth)
+    var allMonth=[],year,month
+    console.log(sYear,sMonth,eYear,eMonth,monthLength)
+    for(year=sYear;year<eYear;){
+        for(month=sMonth;month<=12;month++){
+            allMonth.push(year+'-'+(month<10?'0'+month:month))
+            if(month==12){
+                year++
+            }
+        }
+    }
+    if(sYear==eYear){
+        month=sMonth
+    }else{
+        month=1
+    }
+    for(;month<=eMonth;month++){
+        allMonth.push(year+'-'+(month<10?'0'+month:month) )
+    }
+    console.log(allMonth)
+    $.ajax({
+        type:'POST',
+        url:'http://192.168.50.90/staff/api/staffing/getTree',
+        data:{
+            joinDate:sDate,
+            leaveDate:eDate
+        },
+        success:function(res){
+            console.log(res)
+            $('.content').children().remove()
+            $('.monthContent').children().remove()
+            $('.monthTT').children().remove()
+            $('.content').append(`
+                <div class='deleteIcon item'></div>
+                <div class='editorIcon item'></div>
+                <div class='productContent item'></div>
+                <div class='monthContent'></div>
+            `)
+            var mm=['2019-01','2019-02','2019-03','2019-04','2019-05','2019-06','2019-07','2019-08','2019-09','2019-10','2019-11','2019-12'],
+            ttRR=[0,0,0,0,0,0,0,0,0,0,0,0],
+            ttSlr=[0,0,0,0,0,0,0,0,0,0,0,0],
+            ttDfr=[0,0,0,0,0,0,0,0,0,0,0,0],
+            fnRR=0,
+            fnSlr=0,
+            fnDfr=0
+            for(let a in res){
+                if(res[a].son){
+                    $('.productContent').append(`
+                        <div class='product name pro${res[a].typeID}'><span>${res[a].title}</span></div>
+                        <div class='item productDe pr${res[a].typeID}'></div>
+                    `)
+                    for(let b in res[a].son){
+                        var item=res[a].son
+                        if(item[b].son){
+                            $(`.pr${res[a].typeID}`).append(`
+                                <div class='capability name'><span>${item[b].title}</span></div>
+                                <div class='item capabilityDe ca${item[b].typeID}'></div>
+                            `)
+                            for(let c in item[b].son){
+                                var itemx=item[b].son
+                                if(itemx[c].staff){
+                                    $(`.ca${item[b].typeID}`).append(`
+                                        <div class='service name'><span>${itemx[c].title}</span></div>
+                                        <div class='item serviceDe se${itemx[c].typeID}'></div>
+                                    `)
+                                    for(let d in itemx[c].staff){
+                                        var itemy=itemx[c].staff
+                                        var role,
+                                        fullName,
+                                        runrate,
+                                        joinDate,
+                                        leaveDate,
+                                        salary,
+                                        locationManager,
+                                        functionalManager,
+                                        tyRR=0,
+                                        tySlr=0,
+                                        tyDfr=0
+                                        for(let i in itemy[d].roles){
+                                            role=itemy[d].roles[i].name
+                                        }
+                                        itemy[d].middleName?
+                                            fullName=`${itemy[d].firstName} ${itemy[d].middleName} ${itemy[d].lastName}`:
+                                            fullName=`${itemy[d].firstName} ${itemy[d].lastName}`
+                                        for(let j in itemy[d].RunRate){
+                                            if(itemy[d].RunRate[j]){
+                                                runrate='USD$'+itemy[d].RunRate[j]
+                                            }else{
+                                                runrate='USD$0'
+                                            }  
+                                        }
+                                        itemy[d].joinDate?
+                                            joinDate=itemy[d].joinDate:
+                                            joinDate='——'
+                                        itemy[d].leaveDate?
+                                            leaveDate=itemy[d].leaveDate:
+                                            leaveDate='——'
+                                        itemy[d].LocationManager.name?
+                                            locationManager=itemy[d].LocationManager.name:
+                                            locationManager='——'
+                                        itemy[d].FunctionalManager.name?
+                                            functionalManager=itemy[d].FunctionalManager.name:
+                                            functionalManager='——'
+                                        itemy[d].salary?
+                                            salary='USD$'+itemy[d].salary:
+                                            salary='USD$0'
+                                        $(`.se${itemx[c].typeID}`).append(`
+                                            <div class='role name'><span>${role}</span></div>
+                                            <div class='location name'><span>${itemy[d].Country_Name}</span></div>
+                                            <div class='fullName name'><span>${fullName}</span></div>
+                                            <div class='locationM name'><span>${locationManager}</span></div>
+                                            <div class='functionalM name'><span>${functionalManager}</span></div>
+                                            <div class='joinD name'><span>${joinDate}</span></div>
+                                            <div class='endingD name'><span>${leaveDate}</span></div>
+                                            <div class='runR name'><span>${runrate}</span></div>
+                                            <div class='salary name'><span>${salary}</span></div>
+                                        `)
+                                        $('.deleteIcon').append(`
+                                            <div class='delIcon name' data-id='${itemy[d].staffID}'><span class='icon-delete iconfont'></span></div>
+                                        `)
+                                        $('.editorIcon').append(`
+                                            <div class='ediIcon name' data-id='${itemy[d].staffID}'><span class='icon-editor iconfont'></span></div>
+                                        `)
+                                        for(let i in mm){
+                                            if(mm[i]<joinDate){
+                                                $('.monthContent').append(`
+                                                    <div class='monthContentMonth'>
+                                                        <div class='monthContentItem name black'><span>——</span></div>
+                                                        <div class='monthContentItem name black'><span>——</span></div>
+                                                        <div class='monthContentItem name'><span>——</span></div>
+                                                    </div>    
+                                                `)
+                                            }else{
+                                                $('.monthContent').append(`
+                                                    <div class='monthContentMonth'>
+                                                        <div class='monthContentItem name black'><span>${runrate}</span></div>
+                                                        <div class='monthContentItem name black'><span>${salary}</span></div>
+                                                        <div class='monthContentItem name'><span>${salary.substring(4)-runrate.substring(4)?'USD$'+(salary.substring(4)-runrate.substring(4)):'——'}</span></div>
+                                                    </div>    
+                                                `)
+                                                if(parseInt(runrate.substring(4))){
+                                                    ttRR[i]+=parseInt(runrate.substring(4))
+                                                    tyRR+=parseInt(runrate.substring(4))
+                                                }
+                                                if(parseInt(salary.substring(4))){
+                                                    ttSlr[i]+=parseInt(salary.substring(4))
+                                                    tySlr+=parseInt(salary.substring(4))
+                                                }
+                                            } 
+                                        }
+                                        tyDfr=tySlr-tyRR
+                                        $('.monthContent').append(`
+                                            <div class='monthContentMonth'>
+                                                <div class='monthContentItem name black'><span>USD$${tyRR}</span></div>
+                                                <div class='monthContentItem name black'><span>USD$${tySlr}</span></div>
+                                                <div class='monthContentItem name'><span>USD$${tyDfr}</span></div>
+                                            </div>  
+                                        `)
+                                    }
+                                }else{
+                                    $(`.pr${res[a].typeID}`).remove()
+                                    $(`.pro${res[a].typeID}`).remove()
+                                } 
+                            }
+                        } 
+                    } 
+                }  
+            }
+            for(let i in ttDfr){
+                ttDfr[i]=ttSlr[i]-ttRR[i]
+                fnRR+=ttRR[i]
+                fnSlr+=ttSlr[i]
+                fnDfr+=ttDfr[i]
+                $('.monthTT').append(`
+                    <div><span>USD$${ttRR[i]}</span></div>
+                    <div><span>USD$${ttSlr[i]}</span></div>
+                    <div><span>USD$${ttDfr[i]}</span></div>
+                `)
+            }
+            $('.monthTT').append(`
+                <div><span>USD$${fnRR}</span></div>
+                <div><span>USD$${fnSlr}</span></div>
+                <div><span>USD$${fnDfr}</span></div>
+            `)
+            console.log(ttRR,ttSlr,ttDfr)
+        }
+    })
+}
 $.ajax({
     type:'GET',
     url:'http://192.168.50.90/staff/api/staffing/getTree',
     success:function(res){
         console.log(res)
         $('.content').append(`
-                <div class='deleteIcon item'></div>
-                <div class='editorIcon item'></div>
-                <div class='productContent item'></div>
-                <div class='monthContent'></div>
-            `)
+            <div class='deleteIcon item'></div>
+            <div class='editorIcon item'></div>
+            <div class='productContent item'></div>
+            <div class='monthContent'></div>
+        `)
         var mm=['2019-01','2019-02','2019-03','2019-04','2019-05','2019-06','2019-07','2019-08','2019-09','2019-10','2019-11','2019-12'],
         ttRR=[0,0,0,0,0,0,0,0,0,0,0,0],
         ttSlr=[0,0,0,0,0,0,0,0,0,0,0,0],
@@ -260,9 +453,9 @@ $.ajax({
                                         fullName=`${itemy[d].firstName} ${itemy[d].lastName}`
                                     for(let j in itemy[d].RunRate){
                                         if(itemy[d].RunRate[j]){
-                                            runrate='$'+itemy[d].RunRate[j]
+                                            runrate='USD$'+itemy[d].RunRate[j]
                                         }else{
-                                            runrate='$0'
+                                            runrate='USD$0'
                                         }  
                                     }
                                     itemy[d].joinDate?
@@ -278,8 +471,8 @@ $.ajax({
                                         functionalManager=itemy[d].FunctionalManager.name:
                                         functionalManager='——'
                                     itemy[d].salary?
-                                        salary='$'+itemy[d].salary:
-                                        salary='$0'
+                                        salary='USD$'+itemy[d].salary:
+                                        salary='USD$0'
                                     $(`.se${itemx[c].typeID}`).append(`
                                         <div class='role name'><span>${role}</span></div>
                                         <div class='location name'><span>${itemy[d].Country_Name}</span></div>
@@ -301,35 +494,35 @@ $.ajax({
                                         if(mm[i]<joinDate){
                                             $('.monthContent').append(`
                                                 <div class='monthContentMonth'>
-                                                    <div class='monthContentItem name'><span>——</span></div>
-                                                    <div class='monthContentItem name'><span>——</span></div>
+                                                    <div class='monthContentItem name black'><span>——</span></div>
+                                                    <div class='monthContentItem name black'><span>——</span></div>
                                                     <div class='monthContentItem name'><span>——</span></div>
                                                 </div>    
                                             `)
                                         }else{
                                             $('.monthContent').append(`
                                                 <div class='monthContentMonth'>
-                                                    <div class='monthContentItem name'><span>${runrate}</span></div>
-                                                    <div class='monthContentItem name'><span>${salary}</span></div>
-                                                    <div class='monthContentItem name'><span>${salary.substring(1)-runrate.substring(1)?'$'+(salary.substring(1)-runrate.substring(1)):'——'}</span></div>
+                                                    <div class='monthContentItem name black'><span>${runrate}</span></div>
+                                                    <div class='monthContentItem name black'><span>${salary}</span></div>
+                                                    <div class='monthContentItem name'><span>${salary.substring(4)-runrate.substring(4)?'USD$'+(salary.substring(4)-runrate.substring(4)):'——'}</span></div>
                                                 </div>    
                                             `)
-                                            if(parseInt(runrate.substring(1))){
-                                                ttRR[i]+=parseInt(runrate.substring(1))
-                                                tyRR+=parseInt(runrate.substring(1))
+                                            if(parseInt(runrate.substring(4))){
+                                                ttRR[i]+=parseInt(runrate.substring(4))
+                                                tyRR+=parseInt(runrate.substring(4))
                                             }
-                                            if(parseInt(salary.substring(1))){
-                                                ttSlr[i]+=parseInt(salary.substring(1))
-                                                tySlr+=parseInt(salary.substring(1))
+                                            if(parseInt(salary.substring(4))){
+                                                ttSlr[i]+=parseInt(salary.substring(4))
+                                                tySlr+=parseInt(salary.substring(4))
                                             }
                                         } 
                                     }
                                     tyDfr=tySlr-tyRR
                                     $('.monthContent').append(`
                                         <div class='monthContentMonth'>
-                                            <div class='monthContentItem name'><span>$${tyRR}</span></div>
-                                            <div class='monthContentItem name'><span>$${tySlr}</span></div>
-                                            <div class='monthContentItem name'><span>$${tyDfr}</span></div>
+                                            <div class='monthContentItem name black'><span>USD$${tyRR}</span></div>
+                                            <div class='monthContentItem name black'><span>USD$${tySlr}</span></div>
+                                            <div class='monthContentItem name'><span>USD$${tyDfr}</span></div>
                                         </div>  
                                     `)
                                 }
@@ -348,19 +541,22 @@ $.ajax({
             fnSlr+=ttSlr[i]
             fnDfr+=ttDfr[i]
             $('.monthTT').append(`
-                <div><span>$${ttRR[i]}</span></div>
-                <div><span>$${ttSlr[i]}</span></div>
-                <div><span>$${ttDfr[i]}</span></div>
+                <div><span>USD$${ttRR[i]}</span></div>
+                <div><span>USD$${ttSlr[i]}</span></div>
+                <div><span>USD$${ttDfr[i]}</span></div>
             `)
         }
         $('.monthTT').append(`
-            <div><span>$${fnRR}</span></div>
-            <div><span>$${fnSlr}</span></div>
-            <div><span>$${fnDfr}</span></div>
+            <div><span>USD$${fnRR}</span></div>
+            <div><span>USD$${fnSlr}</span></div>
+            <div><span>USD$${fnDfr}</span></div>
         `)
         console.log(ttRR,ttSlr,ttDfr)
     }
 })
+
+
+ 
 // for(let a in fData){
 //     $('.content').append(`
 //         <div class='deleteIcon name'></div>
@@ -398,10 +594,10 @@ $.ajax({
 //         }
 //     }
 // }
-$('.lookUP').click(function(){
+$('.lookUp').click(function(){
     var sDate=$('.lookUpFrom').val(),
     eDate=$('.lookUpTo').val()
-    console.log(sDate,eDate)
+    getMonthlyData(sDate,eDate)
 })
 $('.add-staff').click(function ()  {
     console.log("haha");
@@ -673,5 +869,8 @@ $.ajax({
         color:black;
         background:#ad9440;
         border-right:black solid 1px
+    }
+    .black{
+        background:black
     }
 </style>

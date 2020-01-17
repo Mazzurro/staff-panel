@@ -83,6 +83,11 @@ if (isset($_GET["url"]) && count(explode('/',$_GET["url"])) >= 4) {
                 Staffpanel::setClearLevel(2);
                 include($_SERVER["DOCUMENT_ROOT"].'/staff/apps/create/newAccount.php');
                 break;
+            case 'newAuthority':
+            case 'newAuthority':
+                Staffpanel::setClearLevel(2);
+                include($_SERVER["DOCUMENT_ROOT"].'/staff/apps/create/newAuthority.php');
+                break;
             case 'addRevenue':
             case 'addRevenue':
                 Staffpanel::setClearLevel(2);

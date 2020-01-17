@@ -38,6 +38,9 @@
     .addAccount{
        	margin: 20px 20px 20px 0px;
     }
+    .addAuthority{
+       	margin: 20px 0px 20px 0px;
+    }
     #searchRevenue {
 	    display: flex;
 	    font-size: 18px;
@@ -205,6 +208,15 @@
         	<div id="searchRevenue">
 	    		<button class="addRunRate">Create run rate</button>
 		        <button class="addAccount">Add new Social Account</button>
+		        <button class="addAuthority">Authority Management</button>
+		        	<select class="bg-search-select" style="width: 20px;margin: 20px 20px 20px 0;">
+		            </select>
+		        	<!--<li>Please select an account</li>
+		        	<li>Please select an account</li>
+		        	<li>Please select an account</li>
+		        	<li>Please select an account</li>
+		        	<li>Please select an account</li>-->
+		        </ul>
 		        <div id="search-container">
 		            <select class="bg-search-select">
 		                <option class="dd-product" value="City, Country">City, Country</option>
@@ -280,114 +292,56 @@ $(document).ready(function () {
                         $('#app-'+randAppID).append(data.data);
             });
         });
-        var data = [{
-        	Country_Name:"Bangalore,India",
-        	City_size:"Large City Population",
-        	Current_Followers:17,
-        	Starting_Month:"Mar-20",
-        	of_followers:500,
-        	Goal_data:"Jun-22",
-        	Priority:1,
-        	Type_of:"Exponential",
-        	Population:"13,000,000",
-        	Est_ofPop:"5.00%",
-        	Est_Max:"650,000"
-        },{
-        	Country_Name:"Mumbai,India",
-        	City_size:"Large City Population",
-        	Current_Followers:56,
-        	Starting_Month:"Mar-20",
-        	of_followers:500,
-        	Goal_data:"Jun-22",
-        	Priority:1,
-        	Type_of:"Exponential",
-        	Population:"20,185,064",
-        	Est_ofPop:"5.00%",
-        	Est_Max:"1,009,253"
-        },{
-        	Country_Name:"Calcutta,India",
-        	City_size:"Large City Population",
-        	Current_Followers:107,
-        	Starting_Month:"Mar-20",
-        	of_followers:500,
-        	Goal_data:"Jun-22",
-        	Priority:1,
-        	Type_of:"Exponential",
-        	Population:"15,323,911",
-        	Est_ofPop:"5.00%",
-        	Est_Max:"766,195"
-        },{
-        	Country_Name:"Hong Kong",
-        	City_size:"Large City Population",
-        	Current_Followers:60,
-        	Starting_Month:"Mar-20",
-        	of_followers:500,
-        	Goal_data:"Jun-22",
-        	Priority:1,
-        	Type_of:"Exponential",
-        	Population:"7,436,154",
-        	Est_ofPop:"5.00%",
-        	Est_Max:"371,807"
-        },{
-        	Country_Name:"Madrid",
-        	City_size:"Large City Population",
-        	Current_Followers:0.01,
-        	Starting_Month:"Mar-20",
-        	of_followers:500,
-        	Goal_data:"Jun-22",
-        	Priority:1,
-        	Type_of:"Exponential",
-        	Population:"6,500,000",
-        	Est_ofPop:"5.00%",
-        	Est_Max:"325,000"
-        },]
-        for(let item in data){
+        $('.addAuthority').click(function () {
+            $('#run-rate').addClass('panel-popup-active loading');
+            let randAppID = paneljs.genID(5);
+            $('#run-rate').append(`<div id="app-`+randAppID+`"></div>`);
+            paneljs.fetch({type:'app', call:'newAuthority', postData: {}}, function (data) {
+                        $('#run-rate').removeClass('loading');
+                        $('#app-'+randAppID).append(data.data);
+            });
+        });
+        $.ajax({
+            type:"POST",
+            url:"http://192.168.50.90/staff/api/Socialmedia/List",
+            success:function(data){
+        		for(let item in data){
+        				var City_size = "";
+        				var Type_of = ""
+        			if(data[item].population_total < 499999){
+        				City_size = "Small City Population"
+        			}else if(500000<=data[item].population_total < 999999){
+        				City_size = "Medium City Population"
+        			}else{
+        				City_size = "Large City Population"
+        			}
+        			if(data[item].location_growth == 1){
+        				Type_of = "Exponential"
+        			}else{
+        				Type_of = "Linear"
+        			}
                     $('.timetable1').append(`
-                     <div class="timetable-data runRate-${data[item].RunRate_id}" id="delete_run_rate" run_rate_id="${data[item].RunRate_id}" >
+                     <div class="timetable-data runRate-${data[item].location_id}" id="delete_run_rate" run_rate_id="${data[item].location_id}" >
                         <span class="iconfont icon-delete" ></span>
                      </div>
-                     <div class="timetable-data Editor_runRate runRate-${data[item].RunRate_id}"id="update_run_rate"  run_rate_id="${data[item].RunRate_id}">
+                     <div class="timetable-data Editor_runRate runRate-${data[item].location_id}"id="update_run_rate"  run_rate_id="${data[item].location_id}">
                         <span id="Editor_run_rate"  class="iconfont icon-editor"></span>
                      </div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}" country_id_value="${data[item].Country_id}"> ${data[item].Country_Name} </div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}" roleID_value="${data[item].roleID}">${data[item].City_size}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].Current_Followers}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].Starting_Month}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].of_followers}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].Goal_data}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].Priority}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].Type_of}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].Population}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].Est_ofPop}</div>
-                     <div class="timetable-data runRate-${data[item].RunRate_id}">${data[item].Est_Max}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}" country_id_value="${data[item].location_id}"> ${data[item].location_city},${data[item].location_country} </div>
+                     <div class="timetable-data runRate-${data[item].location_id}" roleID_value="${data[item].roleID}">${City_size}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${data[item].followers_total}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${data[item].followers_date}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${data[item].location_required_followers}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${data[item].location_required_date}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${data[item].location_priority}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${Type_of}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${data[item].population_total}</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${data[item].location_film_lovers}%</div>
+                     <div class="timetable-data runRate-${data[item].location_id}">${data[item].EST_Max_Film_Loving_Followers}</div>
                      `)
                 }
-//      var Arr =[
-//				    {
-//				    	title:"bangalore-india",
-//				        start_follower: [17, 20, 22, 25, 127],
-//				        new_follower: [17, 20, 22, 25, 127],
-//				        end_follower: [17, 20, 22, 25, 127],
-//				        high_reach: [17, 20, 22, 25, 127],
-//				        avg_reach: [17, 20, 22, 25, 127],
-//				        low_reach: [17, 20, 22, 25, 127]
-//				    }
-//				]
-//      for(let i = 0;i<Arr.length;i++){
-//			$('.mainContent3').append(`
-//      		<div class="content">
-//              	<div class="content1">${Arr[i].title}</div>
-//              	<div class="content2">
-//	                	<div class="timetable-data">Start of Month Follower Count</div>
-//	                </div>
-//			`)
-//			$('.content2').append(`
-//				
-//			`)
-//		}
-//		for(let i = 0;i<Arr.length;i++){
-//			console.log(Arr[i])
-//		}
+           }
+        })
         var arr = ["Bangalore,India","Mumbai,India","Calcutta,India","Hong Kong","Madrid"];
         for(let i = 0;i<arr.length;i++){
         	$('.mainContent3').append(`
