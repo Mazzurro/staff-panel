@@ -7,6 +7,7 @@
     <div id='planning'>
         <div class='new'>
             <button class='add-staff'>Add a new staff planning</button>
+            <button class='view-graph'>View as graph</button>
             <div class=lookUpBox>
                 <span>Look up Through Month</span>
                 <span>From:</span>
@@ -42,7 +43,7 @@
                 <div><span>Service</span></div>
                 <div><span>Role</span></div>
                 <div><span>Location</span></div>
-                <div><span>Name</span></div>
+                <div class='fullName'><span>Name</span></div>
                 <div><span>Location Manager</span></div>
                 <div><span>Functional Manager</span></div>
                 <div><span>Join Date</span></div>
@@ -261,14 +262,14 @@ function getMonthlyData(sDate,eDate){
                         var item=res[a].son
                         if(item[b].son){
                             $(`.pr${res[a].typeID}`).append(`
-                                <div class='capability name'><span>${item[b].title}</span></div>
+                                <div class='capability name cap${item[b].typeID}'><span>${item[b].title}</span></div>
                                 <div class='item capabilityDe ca${item[b].typeID}'></div>
                             `)
                             for(let c in item[b].son){
                                 var itemx=item[b].son
                                 if(itemx[c].staff){
                                     $(`.ca${item[b].typeID}`).append(`
-                                        <div class='service name'><span>${itemx[c].title}</span></div>
+                                        <div class='service name ser${itemx[c].typeID}'><span>${itemx[c].title}</span></div>
                                         <div class='item serviceDe se${itemx[c].typeID}'></div>
                                     `)
                                     for(let d in itemx[c].staff){
@@ -365,15 +366,25 @@ function getMonthlyData(sDate,eDate){
                                             </div>  
                                         `)
                                     }
-                                }else{
-                                    $(`.pr${res[a].typeID}`).remove()
-                                    $(`.pro${res[a].typeID}`).remove()
-                                } 
+                                }
                             }
                         } 
                     } 
                 }  
             }
+            $('.capabilityDe').each(function(){
+                if(!$(this).children().length){
+                    console.log($(this))
+                    $(this).prev().remove()
+                    $(this).remove()
+                }
+            })
+            $('.productDe').each(function(){
+                if(!$(this).children().length){
+                    $(this).prev().remove()
+                    $(this).remove()
+                }
+            })
             for(let i in ttDfr){
                 ttDfr[i]=ttSlr[i]-ttRR[i]
                 fnRR+=ttRR[i]
@@ -609,6 +620,23 @@ $('.add-staff').click(function ()  {
         $('#planning').removeClass('loading');
         $('#app-'+randAppID).append(data.data);
     });  
+})
+$(document).on('click','.view-graph',function(){
+    console.log('asvs')
+    $('#planning').addClass('panel-popup-active loading');
+    let randAppID = paneljs.genID(5);
+    $('#planning').append(`<div id="app-`+randAppID+`"></div>`);
+    paneljs.fetch({
+        type:'app',
+        call:'staffGraph',
+        postData:{
+
+        }
+    },function(data){
+        console.log(data);
+        $('#planning').removeClass('loading');
+        $('#app-'+randAppID).append(data.data);
+    })
 })
 $(document).on('click','.ediIcon',function ()  {
     console.log('ffff')
@@ -873,4 +901,8 @@ $.ajax({
     .black{
         background:black
     }
+    /* .fullName{
+        position:sticky;
+        left:119px
+    } */
 </style>

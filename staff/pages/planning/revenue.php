@@ -15,21 +15,31 @@
 }
 
     @font-face {font-family: "iconfont";
-      src: url('iconfont.eot?t=1577263980856'); /* IE9 */
-      src: url('iconfont.eot?t=1577263980856#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAP0AAsAAAAACGQAAAOoAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqESINlATYCJAMMCwgABCAFhG0HOxswBxFVnGvIfiaYbk24dka5MdZxol9CL9IzGaRT7/VvRZESVhwAgOLEcst2gVAu4QTEM9JsxoAD1sAXWXWit6ZjbKMiVJfseepZ/kd+defDOo/TKIWQIBwNEEAg9n8ux3dNDHD+9/LIMppj+dG9KI4DCmisYfcCy9ICSdAbxi5oiaeBABDhgTCQvIKyOghgMCcRAGRseLAbQsYC1lBPIICAr1jJQFZBA4Fbyt0HsDL4PvmKGCIAHDQU5llVA/l9yPogfwimignaqAJlOhcAtg6gAMIAMIB0VHqaQKNMGChEVcOay3kwEHBTxU0HAomm4q0/PIADAQgPs9YCABCEshzwQXYkiTYYyq5a+nDjeQBWAC4DeCP5ZKDaLFiYPOHuvEQsCSMz+9bp1R2OgxsNh5U+/YEtW40H92+GcqhHMqxX1snihg26jYMWes8sWRbwdcm7NB5QCdmiBljtOwSmHPa3Pmh0JTqj4bAztj2Oszr31MNM9yzR+uwTd27ToZnPn9eJ+kPKYUliL17kW9561aiRDhp1aoD48mXdzmeGJ+5DB656aKzZtsuiBWk0GF3pFlV/CFx7oSKQUB3DidtMVFr2KkLe+6n0ASHf/Yx++hnWE2pL7H71g7X9lmbT5919+f6qz6s89+z86VAjwlbzi3DApvCozfInujkKAUmm03xlEOo1nc/rap8cxxcE1MMXrqrXONLN8OodKcNgHyv7LKtBWxzibFFa1/+7q+sjZTaRUYeDD0e9p2UDfUdPBtRU1gQk3e2qFmx8bYQcp4PImGLbSrWsxXvEQSu37rIZlbUOLT4tmHRwvxHvFqalrbboAgCY0KdUgbnQu3T0X/8GzW8W7e60TvsvSAwA8DY4bwyGTRi6V0EABzDpn5V2xDFNblopUySOxMhTmGGb92aGqGnxPxsBwM5vuM/BJHERApdC4JhxB0rghzBKGGhI4oAnyARRqGq9xB6ZIzMHEOIFgLDxBo6VS0DZ+CCM8gUNrT/wbJqDqCH7HSUB+V0uoWDUIJ/gVd8Z2867sP6A9toISssD5gUp+jjkSZbPV9ghTTEn3mzBbMBQ38IenIdN08NAfUDFiWMeyjQ1VU9KVN9OdnIRJDCkAekJeEqvY7z2bFf4/AGyrhoCNWCq/BeIRL57kEtkHZBK03XC3Er/6MYqMGbwOIP0WmAPXaixMj0wVA8LkMISbkBqUEpRM9NVkyyva99vB4DIfIDGEUoYzO5FF3y+jk50yl0nEw==') format('woff2'),
-      url('iconfont.woff?t=1577263980856') format('woff'),
-      url('iconfont.ttf?t=1577263980856') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-      url('iconfont.svg?t=1577263980856#iconfont') format('svg'); /* iOS 4.1- */
+      src: url('iconfont.eot?t=1581999560417'); /* IE9 */
+      src: url('iconfont.eot?t=1581999560417#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAASYAAsAAAAACWgAAARMAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqFeIR5ATYCJAMUCwwABCAFhG0HVhsTCBFVnCHJfhbYzS6V8H9Igb6dlVXJmhpjiA2+8LenUE7VgV3XTthNmQeMgRGAs3EyQo8gNMIXoTviN9I7DRBAMDdRocPv26+deLqDUCakb/Eq1rV+nVn5PjuLvA6tUqqHCKHxP4eLa2OBzd/gyDJac+C0ol4U9qIJlGVjbOxFYQHegZz7KYhn00HHBJ0HAkBGFipA2rTr4oYEDnUaAUAmjB09FFLEAF5AJJDUYsZaDrIBAiS6mhoA1ju/T76iFpEACoFBvajHqLYj0OKD+mE50+IaBjANWnc2APwmgAGoAMABMi3TMQHMS1SAQf4M5mgBQIYECtpVr9wPpR+Wx+MEkgWpZC0JcNBu/nlEhKowAdMiyYEPqiEIlLnQgUJZCh0YlMshOhaFYK2RATgA/IHkQ1UVOEMpKERIqkURTGCqzBQVYs4h86kCG1G0JBSmUPoZ/alM3F28I5qN9vhkMv75c/eLF55Xr3ym/tT88uX8EVsC0b3Jo7cHI9qIwFF9Vyx0ZCc0w5TgVm2LKm/b5t8+2hSw9Io5Ue4Onuw7GiVEjxZZDofBtUihNRRLJ/5YMJKK3dWxXHialeB/Vt96/kkm3RGe3+ub5EBYiygKf/GirfnOK5+ghGL+aJH88qV737Pgk8wxR69nCVa++6psIr5gLJ3p0UAYtDw3xJEwPyGF7uxT+8DRUe1aoEWLedpztcoWldrZFme1UYv7mluEnj4rnzDe4TCaN582wTDWtsDXVzozqthOphuGbhdWGUyfULx5woRYPzRpuYGQ9wVRVoVHvhfECgLzrJOi/WofiX6wOvW+8c87QzU2fN7A2he2nRFSyKhOvIwhOypr7FQ/sZ014KBUPGsrLaH9ZohthgycUkdsV+TBF/fwCMlsJ3KGj+uC0SN4l89qtERPqmNHZ/fI33aPIF1s1WtESiM13rMuo0YcP13Uq3uvogb3h/SUbPk2qVVKCM2m2vszF++XOy7JpfbfbxuvupL65fVjUKFx43L7cRfrb8ccqLVMY5QlrrGnTEttZvfZ+HfpbzBj6oljg61N/us3CgcAvB1f3+GPa1Nd8EIo8RG+OcKKZfwrVo3ClGJDoKQEY23OMv/TIAPeF4/DXzeuJJPARkiCEEAlyARGUoDgmAoQKOqASNIcZOWuNiuc2BxZIoAyLwQImzegLK4AY/OD4JhfELj8g8jWHGTeTvdUFGV2Z4y5YAXFM5iy70g3y87NvEblm5zDYod0j+xMGOIgiqevsEPuYoF7UIkIAXHfwiW5DJumh4F7i6UEWmQ4hiFlvSgo+3ay0xpDOYEqoPAMGKVeh6z6Ypf4+WtI8Ro5Lij5Yb+HmGO6B7FAVAFxpegqlZzKYOeBkhCCmEmE9VrgEjbUaIkeGLJHWagkArpBbHAU0kpUVREMr2rPcQeATD1GiBJGOBGICOHaW7/ffmnq9c2LvCNfYLcuDBluTbx2Ou9K7ScT') format('woff2'),
+      url('iconfont.woff?t=1581999560417') format('woff'),
+      url('iconfont.ttf?t=1581999560417') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+      url('iconfont.svg?t=1581999560417#iconfont') format('svg'); /* iOS 4.1- */
     }
 
     .iconfont {
       font-family: "iconfont" !important;
-      font-size: 20px;
+      font-size: 16px;
       font-style: normal;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       cursor: pointer;
+    }
+
+    .icon-shuju:before {
+      content: "\e685";
+      font-size:28px;
+    }
+
+    .icon-icon_huabanfuben:before {
+      content: "\e621";
+      font-size: 28px;
     }
 
     .icon-editor:before {
@@ -38,12 +48,6 @@
 
     .icon-delete:before {
       content: "\e614";
-    }
-    .mainContainer{
-    padding:10px
-    }
-    .revenue_Container{
-      margin-right: 2px;
     }
     .revenue_Container timetable{
         height: 730px;
@@ -112,6 +116,7 @@
     }
     .mainContent{
           margin: auto;
+          margin: auto;
           /*max-width: 1950px;*/
           overflow: auto;
           display: grid;
@@ -124,6 +129,7 @@
         white-space: nowrap;
         top: 0;
         z-index: 6;
+
     }
     .timetable-options2{
         position: sticky;
@@ -191,6 +197,15 @@
     .monthContainer h4{
         text-align: center;
         margin-bottom:82px;
+    }
+    .head-icon{
+        background: rgba(26, 26, 26, 0.98);
+        color: #ad9440;
+        text-align: center;
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
     }
     timetable-month-head{
         background-color: #ad9440;
@@ -273,8 +288,8 @@
                     <timetable-head></timetable-head>
                     <timetable-head></timetable-head>
                     <timetable-head></timetable-head>
-                    <timetable-head></timetable-head>
-                    <timetable-head></timetable-head>
+                    <timetable-head class="head-icon"><span class="iconfont icon-icon_huabanfuben" id="pie-data">Pie data</span></timetable-head>
+                    <timetable-head class="head-icon"><span class="iconfont icon-shuju" id="curve-data">Curve data</span></timetable-head>
                     <timetable-head></timetable-head>
                     <timetable-head></timetable-head>
                     <timetable-head></timetable-head>
@@ -709,6 +724,24 @@ var revenueData={
                     $(currentInput).children().attr("onchange","OnPropChanged(this,'"+revenueName+"','"+current_id+"')");
 
                }
+            //弹出饼状图形数据
+            $("#pie-data").click(function(){
+                 $('#revenue_Container').addClass('panel-popup-active loading');
+                let randAppID = paneljs.genID(5);
+                $('#revenue_Container').append(`<div id="app-`+randAppID+`"></div>`);
+                paneljs.fetch({type:'app', call:'pie-data-revenue',postData:{}}, function (data) {
+                            $('#revenue_Container').removeClass('loading');
+                            $('#app-'+randAppID).append(data.data);
+                });
+
+            })
+
+            //弹出曲线图形数据
+            $("#curve-data").click(function(){
+                alert("pie-data，yes")
+
+            })
+
             //编辑Revenue
             $(document).on('click',"#update_Revenue",function(){
                 console.log("编辑");

@@ -71,7 +71,7 @@ class Socialmedia{
         while($Locations = $getLocationList->fetch_assoc()) {
             $LocationList[] = $Locations;
         }
-        $gg = intval((56 * pow((pow((500 / 56) , (1 / (11)))) , (1))));
+        // $gg = intval((56 * pow((pow((500 / 56) , (1 / (11)))) , (1))));
         // echo $gg;
 
         $new_data = [];
@@ -80,11 +80,101 @@ class Socialmedia{
         	if (!array_key_exists($key, $new_data)) {
                 $new_data[$key] = $value;
             }
-            $end = intval(($value['followers_total'] * pow((pow(($value['location_required_followers'] / $value['followers_total']) , (1 / (11)))) , (1))));
-            $new_data[$key]['followers'][$value['followers_date']] = ['Start of Month Follower Count'=>$value['followers_total'],'End of Month Follower Count'=>$end,'of New Followers'=>$end-$value['followers_total']];
+            $year = date("Y",strtotime($value['followers_date']));
+            $month = date("m",strtotime($value['followers_date']));
+
+            $year2 = date("Y",strtotime($value['location_required_date']));
+            $month2 = date("m",strtotime($value['location_required_date']));
+
+            $between = ($year2 * 12 + $month2) - ($year * 12 + $month) + 1;
+            $YM = $year.'-'.$month;
+            $End = intval(($value['followers_total'] * pow((pow(($value['location_required_followers'] / $value['followers_total']) , (1 / ($between)))) , (1))));
+
+            if($value['location_growth'] == 1){
+            	for ($i=1; $i < $between; $i++) {
+	            	$aa = $month+$i;
+	            	if($aa<=12){
+	            		if($aa<10){
+	            			$bb = $year.'-0'.$aa;
+	            		}else{
+	            			$bb = $year.'-'.$aa;
+	            		}
+
+	            	}else{
+	            		$bb = $year+ceil(($aa-12)/12).'-0'.($aa-12);
+	            	}
+	            	$cc = $month+($i-1);
+	            	if($cc<=12){
+	            		if($cc<10){
+	            			$dd = $year.'-0'.$cc;
+	            		}else{
+	            			$dd = $year.'-'.$cc;
+	            		}
+
+	            	}else{
+	            		$dd = $year+intval(($cc-12)/12).'-'.$cc-12;
+	            	}
+
+	            	$start = intval(($value['followers_total'] * pow((pow(($value['location_required_followers'] / $value['followers_total']) , (1 / ($between)))) , (1+($i-1)))));
+	            	$end = intval(($value['followers_total'] * pow((pow(($value['location_required_followers'] / $value['followers_total']) , (1 / ($between)))) , (1+$i))));
+
+	            	$hh = intval(($value['followers_total'] * pow((pow(($value['location_required_followers'] / $value['followers_total']) , (1 / ($between)))) , (1+($i-2)))));
+
+	            	$new_data[$key]['followers'][$bb] = ['Start of Month Follower Count'=>$start,'End of Month Follower Count'=>$end,'of New Followers'=>$end-$start,'High Reach Count'=>round(4.5*$start),'Average Reach Count'=>3*$start,'Low Reach Count'=>round(1.5*$start)];
+
+	            	if($dd = $YM){
+	            		$new_data[$key]['followers'][$year.'-0'.($month-1)] = ['Start of Month Follower Count'=>$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count'],'End of Month Follower Count'=>$value['followers_total'],'of New Followers'=>$value['followers_total']-$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count'],'High Reach Count'=>round(4.5*$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count']),'Average Reach Count'=>3*$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count'],'Low Reach Count'=>round(1.5*$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count'])];
+	            	}
+
+	            }
+            $new_data[$key]['followers'][$YM] = ['Start of Month Follower Count'=>$value['followers_total'],'End of Month Follower Count'=>$End,'of New Followers'=>$End-$value['followers_total'],'High Reach Count'=>round(4.5*$value['followers_total']),'Average Reach Count'=>3*$value['followers_total'],'Low Reach Count'=>round(1.5*$value['followers_total'])];
+            // unset($new_data[$key]['followers'][$year.'-00']);
+            }else{
+            	$linear = intval((($value['location_required_followers'] - $value['followers_total']) / ($between)) * (1) + $value['followers_total']);
+            	for ($i=1; $i < $between; $i++) {
+	            	$aa = $month+$i;
+	            	if($aa<=12){
+	            		if($aa<10){
+	            			$bb = $year.'-0'.$aa;
+	            		}else{
+	            			$bb = $year.'-'.$aa;
+	            		}
+
+	            	}else{
+	            		$bb = $year+ceil(($aa-12)/12).'-0'.($aa-12);
+	            	}
+	            	$cc = $month+($i-1);
+	            	if($cc<=12){
+	            		if($cc<10){
+	            			$dd = $year.'-0'.$cc;
+	            		}else{
+	            			$dd = $year.'-'.$cc;
+	            		}
+
+	            	}else{
+	            		$dd = $year+intval(($cc-12)/12).'-'.$cc-12;
+	            	}
+	            	$start = intval((($value['location_required_followers'] - $value['followers_total']) / ($between)) * (1+($i-1)) + $value['followers_total']);
+	            	$end = intval((($value['location_required_followers'] - $value['followers_total']) / ($between)) * (1+$i) + $value['followers_total']);
+	            	$hh = intval((($value['location_required_followers'] - $value['followers_total']) / ($between)) * (1+($i-2)) + $value['followers_total']);
+	            	$new_data[$key]['followers'][$bb] = ['Start of Month Follower Count'=>$start,'End of Month Follower Count'=>$end,'of New Followers'=>$end-$start,'High Reach Count'=>round(4.5*$start),'Average Reach Count'=>3*$start,'Low Reach Count'=>round(1.5*$start)];
+
+	            	if($dd = $YM){
+	            		$new_data[$key]['followers'][$year.'-0'.($month-1)] = ['Start of Month Follower Count'=>$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count'],'End of Month Follower Count'=>$value['followers_total'],'of New Followers'=>$value['followers_total']-$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count'],'High Reach Count'=>round(4.5*$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count']),'Average Reach Count'=>3*$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count'],'Low Reach Count'=>round(1.5*$new_data[$key]['followers'][$year.'-0'.($month-2)]['End of Month Follower Count'])];
+	            	}
+
+	            }
+            $new_data[$key]['followers'][$YM] = ['Start of Month Follower Count'=>$value['followers_total'],'End of Month Follower Count'=>$linear,'of New Followers'=>$linear-$value['followers_total'],'High Reach Count'=>round(4.5*$value['followers_total']),'Average Reach Count'=>3*$value['followers_total'],'Low Reach Count'=>round(1.5*$value['followers_total'])];
+            }
+
         }
-        return $new_data;
-        var_dump($LocationList);
+        foreach ($new_data as $k => $v) {
+        	unset($v['followers'][$year.'-00']);
+            $new_List[] = $v;
+        }
+        // var_dump($new_data);
+        return $new_List;
+
 	}
 	public static function AccountsList(){
 		$getAccounts = db::$con->query("SELECT social_media_account_id,social_media_account_name,social_media_type FROM socialMediaAccounts AS a LEFT JOIN socialMediaTypes AS b ON a.social_media_account_type = b.social_media_type_id");
@@ -93,6 +183,22 @@ class Socialmedia{
         }
         return $AccountsList;
 	}
+	public static function getAccountInfo($account_id){
+		$accountData = self::AccountsList();
+		foreach($accountData as $account) {
+			if ($account['social_media_account_id'] == $account_id) return $account;
+		}
+	}
+	    public static function getAccountParticipants($account_id) {
+        $partsList = [];
+
+        $getParts = db::$con->query("SELECT staffInfo.staffID, firstName, middleName, lastName, avatar, permission_level FROM socialMediaAccountsPermissions LEFT JOIN staffInfo ON staffInfo.staffID = socialMediaAccountsPermissions.staff_id WHERE socialMediaAccountsPermissions.social_media_account_id = $account_id AND socialMediaAccountsPermissions.removed_on IS NULL;");
+        while ($part = $getParts->fetch_assoc()) {
+            $partsList[$part['staffID']] = $part;
+        }
+
+        return $partsList;
+    }
 	public static function Permissions($Accounts_id,$staffList){
 		// $Accounts_id = '1';
 		// $staffList = ['40'=>'2','41'=>'2','43'=>'2'];

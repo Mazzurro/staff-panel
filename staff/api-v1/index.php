@@ -358,6 +358,10 @@ if (isset($_GET["api"]) && count(explode('/',$_GET["api"])) >= 4) {
                     Staffpanel::setClearLevel(1);
                     echo json_encode(Socialmedia::Permissions($_POST['Accounts_id'],$_POST['staff']));
                     break;
+                case 'account_info':
+                	Staffpanel::setClearLevel(1);
+                    echo json_encode(Socialmedia::getAccountInfo($_POST['account_id']));
+                	break;
             }
             break;
         default:

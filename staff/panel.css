@@ -598,7 +598,22 @@ dropdown-options-item {
     color: #ad9440;
     font-size: inherit;
 }
-
+.bg-account-select{
+	border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 5px;
+    background: #ad9440;
+    width: 20px;
+    margin: 20px 20px 20px 0;
+	overflow: auto;
+}
+.bg-account-select option {
+	overflow: auto;
+    background: #ad9440;
+    color: var(--black);
+}
 .bg-search-select {
     border: none;
     outline: none;
