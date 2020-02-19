@@ -285,7 +285,7 @@
                     </div>
                 </div>
                 <timetable>
-                    <timetable-head></timetable-head>
+                    <timetable-head>asdas</timetable-head>
                     <timetable-head></timetable-head>
                     <timetable-head></timetable-head>
                     <timetable-head class="head-icon"><span class="iconfont icon-icon_huabanfuben" id="pie-data">Pie data</span></timetable-head>
@@ -724,6 +724,8 @@ var revenueData={
                     $(currentInput).children().attr("onchange","OnPropChanged(this,'"+revenueName+"','"+current_id+"')");
 
                }
+
+               fsdfasdfsadfasdfa
             //弹出饼状图形数据
             $("#pie-data").click(function(){
                  $('#revenue_Container').addClass('panel-popup-active loading');

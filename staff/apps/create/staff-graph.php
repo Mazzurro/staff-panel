@@ -1,9 +1,8 @@
 <div class="panel panel-popup" id='container'>
-<span>aaaaaaaaaa</span>
 
 </div>
+<script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
 <script>
-import Hightcharts from 'https://code.highcharts.com.cn/highcharts/es-modules/masters/highcharts.js'
 var chart=Highcharts.chart('container',{
     title:{
         text:'staff graph'

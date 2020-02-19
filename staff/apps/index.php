@@ -103,6 +103,11 @@ if (isset($_GET["url"]) && count(explode('/',$_GET["url"])) >= 4) {
                 Staffpanel::setClearLevel(2);
                 include($_SERVER["DOCUMENT_ROOT"].'/staff/apps/create/pie-data-revenue.php');
                 break;
+            case 'pie-data-graph':
+            case 'pie-data-graph':
+                 Staffpanel::setClearLevel(2);
+                 include($_SERVER["DOCUMENT_ROOT"].'/staff/apps/create/graph.php');
+            break;
             case '8':
             case 8:
                 Staffpanel::setClearLevel(2);
